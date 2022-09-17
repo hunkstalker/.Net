@@ -4,7 +4,7 @@
              Title="Agregar tarea"
              x:Class="ToDo.App.Views.AddPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="btn_save" Text="Guardar" Clicked=""/>
+        <ToolbarItem x:Name="btn_save" Text="Guardar"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="15">
