@@ -4,13 +4,13 @@
              Title="Agregar tarea"
              x:Class="ToDo.App.Views.AddPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="btn_save" Text="Guardar"/>
+        <ToolbarItem x:Name="btn_save" Text="Guardar" Clicked="btn_save_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="15">
-            <Label Text="Nombre" FontSize="Medium" TextColor="{StaticResource colorPrimaryDark}"/>
+            <Label Text="Nombre" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource colorPrimaryDark}"/>
             <Entry x:Name="nombre"/>
-            <Label Text="Descripción" FontSize="Medium" TextColor="{StaticResource colorPrimaryDark}"/>
+            <Label Text="Descripción" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource colorPrimaryDark}"/>
             <Editor x:Name="descripcion"  HeightRequest="200"/>
         </StackLayout>
     </ContentPage.Content>
