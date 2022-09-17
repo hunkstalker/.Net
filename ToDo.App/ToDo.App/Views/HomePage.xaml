@@ -7,10 +7,25 @@
         <ToolbarItem Text="Agregar" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="HOME PAGE"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView x:Name="lista_tareas" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem
+                                x:Name="btn_remove"
+                                Text="Eliminar"
+                                IsDestructive="True"
+                                Clicked="btn_remove_Clicked"
+                                CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="15">
+                            <Label Text="{Binding Name}" FontSize="Medium" TextColor="{StaticResource colorPrimary}"/>
+                            <Label Text="{Binding Description}" FontSize="Medium" TextColor="{StaticResource colorAccent}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
