@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace IntroduccionCsh.Presentacion
     public partial class Usuarios : Form
     {
         OpenFileDialog dlg = new OpenFileDialog();
+
+        int ID;
 
         public Usuarios()
         {
@@ -37,6 +40,7 @@ namespace IntroduccionCsh.Presentacion
             btn_saveChanges.Visible = false;
             tb_usuario.Clear();
             tb_pass.Clear();
+            pnl_info.Dock = DockStyle.Fill;
         }
 
         private void pb_foto_Click(object sender, EventArgs e)
@@ -88,6 +92,30 @@ namespace IntroduccionCsh.Presentacion
             {
                 MessageBox.Show("Usuario registrado", "Registro correcto", MessageBoxButtons.OK);
                 pnl_info.Visible = false;
+            }
+        }
+
+        private void btn_return_Click(object sender, EventArgs e)
+        {
+            pnl_info.Visible = false;
+        }
+
+        private void dg_data_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == this.dg_data.Columns["Editar"].Index)
+            {
+                ID = Convert.ToInt32(dg_data.SelectedCells[2].Value.ToString());
+                tb_usuario.Text = dg_data.SelectedCells[3].Value.ToString();
+                tb_pass.Text = dg_data.SelectedCells[4].Value.ToString();
+                pb_foto.BackgroundImage = null;
+                byte[] b = (Byte[])dg_data.SelectedCells[5].Value;
+                MemoryStream ms = new MemoryStream(b);
+                pb_foto.Image = Image.FromStream(ms);
+
+                pnl_info.Visible = true;
+                pnl_info.Dock = DockStyle.Fill;
+                btn_save.Visible = false;
+                btn_saveChanges.Visible = false;
             }
         }
     }

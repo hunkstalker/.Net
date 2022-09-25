@@ -45,6 +45,7 @@ namespace IntroduccionCsh.Datos
                 dConnection.Close();
             }
         }
+
         public DataTable show_users()
         {
             try
@@ -69,6 +70,32 @@ namespace IntroduccionCsh.Datos
             {
                 MessageBox.Show(ex.Message);
                 return null;
+            }
+            finally
+            {
+                dConnection.Close();
+            }
+        }
+
+        public bool edit_users(lUsuarios dt)
+        {
+            try
+            {
+                dConnection.Open();
+                cmd = new SqlCommand("edit_users", dConnection.connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ID", dt.User);
+                cmd.Parameters.AddWithValue("@User", dt.User);
+                cmd.Parameters.AddWithValue("@Pass", dt.Pass);
+                cmd.Parameters.AddWithValue("@Icon", dt.Icon);
+                cmd.Parameters.AddWithValue("@Status", dt.Status);
+                return (cmd.ExecuteNonQuery() != 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
             }
             finally
             {
