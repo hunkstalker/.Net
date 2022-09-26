@@ -37,6 +37,8 @@
             this.tb_search = new System.Windows.Forms.TextBox();
             this.lb_header = new System.Windows.Forms.Label();
             this.dg_data = new System.Windows.Forms.DataGridView();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnl_info = new System.Windows.Forms.Panel();
             this.btn_return = new System.Windows.Forms.Button();
             this.btn_saveChanges = new System.Windows.Forms.Button();
@@ -47,8 +49,6 @@
             this.lb_usuario = new System.Windows.Forms.Label();
             this.tb_pass = new System.Windows.Forms.TextBox();
             this.tb_usuario = new System.Windows.Forms.TextBox();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_search)).BeginInit();
@@ -152,6 +152,20 @@
             this.dg_data.TabIndex = 1;
             this.dg_data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_data_CellClick);
             // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Editar.Name = "Editar";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.Name = "Eliminar";
+            // 
             // pnl_info
             // 
             this.pnl_info.BackColor = System.Drawing.SystemColors.Window;
@@ -197,6 +211,7 @@
             this.btn_saveChanges.TabIndex = 7;
             this.btn_saveChanges.Text = "Guardar cambios";
             this.btn_saveChanges.UseVisualStyleBackColor = false;
+            this.btn_saveChanges.Click += new System.EventHandler(this.btn_saveChanges_Click);
             // 
             // btn_save
             // 
@@ -268,20 +283,6 @@
             this.tb_usuario.Name = "tb_usuario";
             this.tb_usuario.Size = new System.Drawing.Size(194, 26);
             this.tb_usuario.TabIndex = 0;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Editar.Name = "Editar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eliminar.Name = "Eliminar";
             // 
             // Usuarios
             // 

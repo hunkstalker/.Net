@@ -85,7 +85,7 @@ namespace IntroduccionCsh.Datos
                 cmd = new SqlCommand("edit_users", dConnection.connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@ID", dt.User);
+                cmd.Parameters.AddWithValue("@ID", dt.Id);
                 cmd.Parameters.AddWithValue("@User", dt.User);
                 cmd.Parameters.AddWithValue("@Pass", dt.Pass);
                 cmd.Parameters.AddWithValue("@Icon", dt.Icon);

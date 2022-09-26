@@ -40,6 +40,7 @@ namespace IntroduccionCsh.Presentacion
             btn_saveChanges.Visible = false;
             tb_usuario.Clear();
             tb_pass.Clear();
+            pb_foto.Load(@"../../../Assets/blank-profile-picture.png");
             pnl_info.Dock = DockStyle.Fill;
         }
 
@@ -115,7 +116,33 @@ namespace IntroduccionCsh.Presentacion
                 pnl_info.Visible = true;
                 pnl_info.Dock = DockStyle.Fill;
                 btn_save.Visible = false;
-                btn_saveChanges.Visible = false;
+                btn_saveChanges.Visible = true;
+            }
+        }
+
+        private void btn_saveChanges_Click(object sender, EventArgs e)
+        {
+            update_user();
+            show_users();
+        }
+
+        private void update_user()
+        {
+            lUsuarios dt = new lUsuarios();
+            dUsuarios function = new dUsuarios();
+
+            dt.Id = ID;
+            dt.User = tb_usuario.Text;
+            dt.Pass = tb_pass.Text;
+            dt.Status = "Active";
+
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            pb_foto.Image.Save(ms, pb_foto.Image.RawFormat);
+            dt.Icon = ms.GetBuffer();
+            if (function.edit_users(dt))
+            {
+                MessageBox.Show("Usuario modificado", "Registro correcto", MessageBoxButtons.OK);
+                pnl_info.Visible = false;
             }
         }
     }
