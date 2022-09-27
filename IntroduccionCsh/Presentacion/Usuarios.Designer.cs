@@ -121,6 +121,7 @@
             this.tb_search.Name = "tb_search";
             this.tb_search.Size = new System.Drawing.Size(280, 16);
             this.tb_search.TabIndex = 2;
+            this.tb_search.TextChanged += new System.EventHandler(this.tb_search_TextChanged);
             // 
             // lb_header
             // 
@@ -293,6 +294,7 @@
             this.Controls.Add(this.dg_data);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";

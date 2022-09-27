@@ -14,7 +14,6 @@ namespace IntroduccionCsh.Datos
     internal class dUsuarios
     {
         private SqlCommand cmd = new SqlCommand();
-        private int id;
 
         public bool insert_users(lUsuarios dt)
         {
@@ -33,6 +32,53 @@ namespace IntroduccionCsh.Datos
                 cmd.Parameters.AddWithValue("@Pass", dt.Pass);
                 cmd.Parameters.AddWithValue("@Icon", dt.Icon);
                 cmd.Parameters.AddWithValue("@Status", dt.Status);
+                return (cmd.ExecuteNonQuery() != 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                dConnection.Close();
+            }
+        }
+
+        public bool edit_users(lUsuarios dt)
+        {
+            try
+            {
+                dConnection.Open();
+                cmd = new SqlCommand("edit_users", dConnection.connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ID", dt.Id);
+                cmd.Parameters.AddWithValue("@User", dt.User);
+                cmd.Parameters.AddWithValue("@Pass", dt.Pass);
+                cmd.Parameters.AddWithValue("@Icon", dt.Icon);
+                cmd.Parameters.AddWithValue("@Status", dt.Status);
+                return (cmd.ExecuteNonQuery() != 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                dConnection.Close();
+            }
+        }
+
+        public bool delete_users(lUsuarios dt)
+        {
+            try
+            {
+                dConnection.Open();
+                cmd = new SqlCommand("delete_users", dConnection.connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID", dt.Id);
                 return (cmd.ExecuteNonQuery() != 0);
             }
             catch (Exception ex)
@@ -66,7 +112,7 @@ namespace IntroduccionCsh.Datos
                     return null;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
@@ -77,25 +123,31 @@ namespace IntroduccionCsh.Datos
             }
         }
 
-        public bool edit_users(lUsuarios dt)
+        public DataTable search_users(string param)
         {
             try
             {
                 dConnection.Open();
-                cmd = new SqlCommand("edit_users", dConnection.connection);
+                cmd = new SqlCommand("search_users", dConnection.connection);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@search", param);
 
-                cmd.Parameters.AddWithValue("@ID", dt.Id);
-                cmd.Parameters.AddWithValue("@User", dt.User);
-                cmd.Parameters.AddWithValue("@Pass", dt.Pass);
-                cmd.Parameters.AddWithValue("@Icon", dt.Icon);
-                cmd.Parameters.AddWithValue("@Status", dt.Status);
-                return (cmd.ExecuteNonQuery() != 0);
+                if (cmd.ExecuteNonQuery() != 0)
+                {
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    return dt;
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
+                return null;
             }
             finally
             {

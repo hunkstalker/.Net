@@ -18,7 +18,7 @@ namespace IntroduccionCsh.Presentacion
         OpenFileDialog dlg = new OpenFileDialog();
 
         int ID;
-
+     
         public Usuarios()
         {
             InitializeComponent();
@@ -31,6 +31,9 @@ namespace IntroduccionCsh.Presentacion
             dUsuarios function = new dUsuarios();
             dt = function.show_users();
             dg_data.DataSource = dt;
+            dg_data.Columns["Editar"].DisplayIndex = 6;
+            dg_data.Columns["Eliminar"].DisplayIndex = 6;
+            //((DataGridViewImageColumn)dg_data.Columns["icon"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
         private void btn_insert_Click(object sender, EventArgs e)
@@ -77,6 +80,48 @@ namespace IntroduccionCsh.Presentacion
             }
         }
 
+        private void btn_saveChanges_Click(object sender, EventArgs e)
+        {
+            update_user();
+            show_users();
+        }
+
+        private void btn_return_Click(object sender, EventArgs e)
+        {
+            pnl_info.Visible = false;
+        }
+
+        private void dg_data_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ID = Convert.ToInt32(dg_data.SelectedCells[2].Value.ToString());
+
+            if (e.ColumnIndex == this.dg_data.Columns["Eliminar"].Index)
+            {
+                DialogResult result;
+                result = MessageBox.Show("¿Realmente desea eliminar este registro?", "Eliminando registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
+                {
+                    delete_user();
+                    show_users();
+                }
+            }
+
+            if (e.ColumnIndex == this.dg_data.Columns["Editar"].Index)
+            {
+                tb_usuario.Text = dg_data.SelectedCells[3].Value.ToString();
+                tb_pass.Text = dg_data.SelectedCells[4].Value.ToString();
+                pb_foto.BackgroundImage = null;
+                byte[] b = (Byte[])dg_data.SelectedCells[5].Value;
+                MemoryStream ms = new MemoryStream(b);
+                pb_foto.Image = Image.FromStream(ms);
+
+                pnl_info.Visible = true;
+                pnl_info.Dock = DockStyle.Fill;
+                btn_save.Visible = false;
+                btn_saveChanges.Visible = true;
+            }
+        }
+
         private void save_user()
         {
             lUsuarios dt = new lUsuarios();
@@ -94,36 +139,6 @@ namespace IntroduccionCsh.Presentacion
                 MessageBox.Show("Usuario registrado", "Registro correcto", MessageBoxButtons.OK);
                 pnl_info.Visible = false;
             }
-        }
-
-        private void btn_return_Click(object sender, EventArgs e)
-        {
-            pnl_info.Visible = false;
-        }
-
-        private void dg_data_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if(e.ColumnIndex == this.dg_data.Columns["Editar"].Index)
-            {
-                ID = Convert.ToInt32(dg_data.SelectedCells[2].Value.ToString());
-                tb_usuario.Text = dg_data.SelectedCells[3].Value.ToString();
-                tb_pass.Text = dg_data.SelectedCells[4].Value.ToString();
-                pb_foto.BackgroundImage = null;
-                byte[] b = (Byte[])dg_data.SelectedCells[5].Value;
-                MemoryStream ms = new MemoryStream(b);
-                pb_foto.Image = Image.FromStream(ms);
-
-                pnl_info.Visible = true;
-                pnl_info.Dock = DockStyle.Fill;
-                btn_save.Visible = false;
-                btn_saveChanges.Visible = true;
-            }
-        }
-
-        private void btn_saveChanges_Click(object sender, EventArgs e)
-        {
-            update_user();
-            show_users();
         }
 
         private void update_user()
@@ -144,6 +159,33 @@ namespace IntroduccionCsh.Presentacion
                 MessageBox.Show("Usuario modificado", "Registro correcto", MessageBoxButtons.OK);
                 pnl_info.Visible = false;
             }
+        }
+
+        private void delete_user()
+        {
+            lUsuarios dt = new lUsuarios();
+            dUsuarios function = new dUsuarios();
+
+            dt.Id = ID;
+
+            if (function.delete_users(dt))
+            {
+                MessageBox.Show("Usuario eliminado", "Eliminación correcta", MessageBoxButtons.OK);
+                pnl_info.Visible = false;
+            }
+        }
+
+        private void tb_search_TextChanged(object sender, EventArgs e)
+        {
+            search_user();
+        }
+
+        private void search_user()
+        {
+            DataTable dt;
+            dUsuarios function = new dUsuarios();
+            dt = function.search_users(tb_search.Text);
+            dg_data.DataSource = dt;
         }
     }
 }
