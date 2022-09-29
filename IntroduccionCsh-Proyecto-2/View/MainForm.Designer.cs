@@ -30,42 +30,45 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_ConsultaHoras = new System.Windows.Forms.Button();
-            this.btn_personal = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_registro = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btn_usuarios = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btn_restaurar = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.btn_respaldo = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.btn_estaciones = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.branding = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btn_respaldo = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btn_restaurar = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_usuarios = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_registro = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_personal = new System.Windows.Forms.Button();
+            this.btn_ConsultaHoras = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnl_welcome = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.lb_welcome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.panel20.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.pnl_welcome.SuspendLayout();
+            this.panel22.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,67 +80,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 693);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(168, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1078, 693);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(168, 55);
-            this.panel3.TabIndex = 0;
-            // 
-            // btn_ConsultaHoras
-            // 
-            this.btn_ConsultaHoras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_ConsultaHoras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_ConsultaHoras.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultaHoras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_ConsultaHoras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
-            this.btn_ConsultaHoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultaHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultaHoras.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultaHoras.Location = new System.Drawing.Point(0, 55);
-            this.btn_ConsultaHoras.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_ConsultaHoras.Name = "btn_ConsultaHoras";
-            this.btn_ConsultaHoras.Size = new System.Drawing.Size(168, 65);
-            this.btn_ConsultaHoras.TabIndex = 1;
-            this.btn_ConsultaHoras.Text = "Horas";
-            this.btn_ConsultaHoras.UseVisualStyleBackColor = false;
-            // 
-            // btn_personal
-            // 
-            this.btn_personal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_personal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_personal.FlatAppearance.BorderSize = 0;
-            this.btn_personal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_personal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
-            this.btn_personal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_personal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_personal.ForeColor = System.Drawing.Color.White;
-            this.btn_personal.Location = new System.Drawing.Point(0, 120);
-            this.btn_personal.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_personal.Name = "btn_personal";
-            this.btn_personal.Size = new System.Drawing.Size(168, 65);
-            this.btn_personal.TabIndex = 2;
-            this.btn_personal.Text = "Personal";
-            this.btn_personal.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -154,201 +100,22 @@
             this.panel4.Size = new System.Drawing.Size(168, 508);
             this.panel4.TabIndex = 3;
             // 
-            // panel5
+            // panel20
             // 
-            this.panel5.Controls.Add(this.btn_registro);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(168, 74);
-            this.panel5.TabIndex = 0;
+            this.panel20.Controls.Add(this.panel21);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel20.Location = new System.Drawing.Point(0, 370);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(168, 138);
+            this.panel20.TabIndex = 5;
             // 
-            // btn_registro
+            // panel21
             // 
-            this.btn_registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_registro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_registro.FlatAppearance.BorderSize = 0;
-            this.btn_registro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_registro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
-            this.btn_registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registro.ForeColor = System.Drawing.Color.White;
-            this.btn_registro.Image = ((System.Drawing.Image)(resources.GetObject("btn_registro.Image")));
-            this.btn_registro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registro.Location = new System.Drawing.Point(10, 10);
-            this.btn_registro.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_registro.Name = "btn_registro";
-            this.btn_registro.Size = new System.Drawing.Size(158, 64);
-            this.btn_registro.TabIndex = 3;
-            this.btn_registro.Text = "Registro   ";
-            this.btn_registro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_registro.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(168, 10);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 10);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 64);
-            this.panel7.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btn_usuarios);
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Controls.Add(this.panel10);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 74);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(168, 74);
-            this.panel8.TabIndex = 1;
-            // 
-            // btn_usuarios
-            // 
-            this.btn_usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_usuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_usuarios.FlatAppearance.BorderSize = 0;
-            this.btn_usuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
-            this.btn_usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_usuarios.ForeColor = System.Drawing.Color.White;
-            this.btn_usuarios.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuarios.Image")));
-            this.btn_usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_usuarios.Location = new System.Drawing.Point(10, 10);
-            this.btn_usuarios.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_usuarios.Name = "btn_usuarios";
-            this.btn_usuarios.Size = new System.Drawing.Size(158, 64);
-            this.btn_usuarios.TabIndex = 3;
-            this.btn_usuarios.Text = "Usuarios   ";
-            this.btn_usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_usuarios.UseVisualStyleBackColor = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 10);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 64);
-            this.panel9.TabIndex = 1;
-            // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(168, 10);
-            this.panel10.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.btn_restaurar);
-            this.panel11.Controls.Add(this.panel12);
-            this.panel11.Controls.Add(this.panel13);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 148);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(168, 74);
-            this.panel11.TabIndex = 2;
-            // 
-            // btn_restaurar
-            // 
-            this.btn_restaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_restaurar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_restaurar.FlatAppearance.BorderSize = 0;
-            this.btn_restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
-            this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_restaurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_restaurar.ForeColor = System.Drawing.Color.White;
-            this.btn_restaurar.Image = ((System.Drawing.Image)(resources.GetObject("btn_restaurar.Image")));
-            this.btn_restaurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_restaurar.Location = new System.Drawing.Point(10, 10);
-            this.btn_restaurar.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_restaurar.Name = "btn_restaurar";
-            this.btn_restaurar.Size = new System.Drawing.Size(158, 64);
-            this.btn_restaurar.TabIndex = 3;
-            this.btn_restaurar.Text = "Restaurar   ";
-            this.btn_restaurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_restaurar.UseVisualStyleBackColor = false;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(0, 10);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 64);
-            this.panel12.TabIndex = 1;
-            // 
-            // panel13
-            // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(168, 10);
-            this.panel13.TabIndex = 0;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.btn_respaldo);
-            this.panel14.Controls.Add(this.panel15);
-            this.panel14.Controls.Add(this.panel16);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 222);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(168, 74);
-            this.panel14.TabIndex = 3;
-            // 
-            // btn_respaldo
-            // 
-            this.btn_respaldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_respaldo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_respaldo.FlatAppearance.BorderSize = 0;
-            this.btn_respaldo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.btn_respaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
-            this.btn_respaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_respaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_respaldo.ForeColor = System.Drawing.Color.White;
-            this.btn_respaldo.Image = ((System.Drawing.Image)(resources.GetObject("btn_respaldo.Image")));
-            this.btn_respaldo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_respaldo.Location = new System.Drawing.Point(10, 10);
-            this.btn_respaldo.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_respaldo.Name = "btn_respaldo";
-            this.btn_respaldo.Size = new System.Drawing.Size(158, 64);
-            this.btn_respaldo.TabIndex = 3;
-            this.btn_respaldo.Text = "Respaldos   ";
-            this.btn_respaldo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_respaldo.UseVisualStyleBackColor = false;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel15.Location = new System.Drawing.Point(0, 10);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(10, 64);
-            this.panel15.TabIndex = 1;
-            // 
-            // panel16
-            // 
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(168, 10);
-            this.panel16.TabIndex = 0;
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(168, 10);
+            this.panel21.TabIndex = 0;
             // 
             // panel17
             // 
@@ -399,56 +166,305 @@
             this.panel19.Size = new System.Drawing.Size(168, 10);
             this.panel19.TabIndex = 0;
             // 
-            // panel20
+            // panel14
             // 
-            this.panel20.Controls.Add(this.branding);
-            this.panel20.Controls.Add(this.panel21);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(0, 370);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(168, 138);
-            this.panel20.TabIndex = 5;
+            this.panel14.Controls.Add(this.btn_respaldo);
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Controls.Add(this.panel16);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 222);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(168, 74);
+            this.panel14.TabIndex = 3;
             // 
-            // panel21
+            // btn_respaldo
             // 
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(168, 10);
-            this.panel21.TabIndex = 0;
+            this.btn_respaldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_respaldo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_respaldo.FlatAppearance.BorderSize = 0;
+            this.btn_respaldo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_respaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.btn_respaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_respaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_respaldo.ForeColor = System.Drawing.Color.White;
+            this.btn_respaldo.Image = ((System.Drawing.Image)(resources.GetObject("btn_respaldo.Image")));
+            this.btn_respaldo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_respaldo.Location = new System.Drawing.Point(10, 10);
+            this.btn_respaldo.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_respaldo.Name = "btn_respaldo";
+            this.btn_respaldo.Size = new System.Drawing.Size(158, 64);
+            this.btn_respaldo.TabIndex = 3;
+            this.btn_respaldo.Text = "Respaldos   ";
+            this.btn_respaldo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_respaldo.UseVisualStyleBackColor = false;
             // 
-            // branding
+            // panel15
             // 
-            this.branding.AutoSize = true;
-            this.branding.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.branding.ForeColor = System.Drawing.Color.White;
-            this.branding.Location = new System.Drawing.Point(24, 112);
-            this.branding.Name = "branding";
-            this.branding.Size = new System.Drawing.Size(121, 17);
-            this.branding.TabIndex = 2;
-            this.branding.Text = "TIME MACHINE!";
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel15.Location = new System.Drawing.Point(0, 10);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(10, 64);
+            this.panel15.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(168, 10);
+            this.panel16.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btn_restaurar);
+            this.panel11.Controls.Add(this.panel12);
+            this.panel11.Controls.Add(this.panel13);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 148);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(168, 74);
+            this.panel11.TabIndex = 2;
+            // 
+            // btn_restaurar
+            // 
+            this.btn_restaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_restaurar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_restaurar.FlatAppearance.BorderSize = 0;
+            this.btn_restaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_restaurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_restaurar.ForeColor = System.Drawing.Color.White;
+            this.btn_restaurar.Image = ((System.Drawing.Image)(resources.GetObject("btn_restaurar.Image")));
+            this.btn_restaurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_restaurar.Location = new System.Drawing.Point(10, 10);
+            this.btn_restaurar.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(158, 64);
+            this.btn_restaurar.TabIndex = 3;
+            this.btn_restaurar.Text = "Restaurar   ";
+            this.btn_restaurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_restaurar.UseVisualStyleBackColor = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 64);
+            this.panel12.TabIndex = 1;
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(168, 10);
+            this.panel13.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btn_usuarios);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 74);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(168, 74);
+            this.panel8.TabIndex = 1;
+            // 
+            // btn_usuarios
+            // 
+            this.btn_usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_usuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_usuarios.FlatAppearance.BorderSize = 0;
+            this.btn_usuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.btn_usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_usuarios.ForeColor = System.Drawing.Color.White;
+            this.btn_usuarios.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuarios.Image")));
+            this.btn_usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_usuarios.Location = new System.Drawing.Point(10, 10);
+            this.btn_usuarios.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_usuarios.Name = "btn_usuarios";
+            this.btn_usuarios.Size = new System.Drawing.Size(158, 64);
+            this.btn_usuarios.TabIndex = 3;
+            this.btn_usuarios.Text = "Usuarios   ";
+            this.btn_usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_usuarios.UseVisualStyleBackColor = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 10);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 64);
+            this.panel9.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(168, 10);
+            this.panel10.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btn_registro);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(168, 74);
+            this.panel5.TabIndex = 0;
+            // 
+            // btn_registro
+            // 
+            this.btn_registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_registro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_registro.FlatAppearance.BorderSize = 0;
+            this.btn_registro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_registro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.btn_registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registro.ForeColor = System.Drawing.Color.White;
+            this.btn_registro.Image = ((System.Drawing.Image)(resources.GetObject("btn_registro.Image")));
+            this.btn_registro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_registro.Location = new System.Drawing.Point(10, 10);
+            this.btn_registro.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_registro.Name = "btn_registro";
+            this.btn_registro.Size = new System.Drawing.Size(158, 64);
+            this.btn_registro.TabIndex = 3;
+            this.btn_registro.Text = "Registro   ";
+            this.btn_registro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_registro.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 10);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 64);
+            this.panel7.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(168, 10);
+            this.panel6.TabIndex = 0;
+            // 
+            // btn_personal
+            // 
+            this.btn_personal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_personal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_personal.FlatAppearance.BorderSize = 0;
+            this.btn_personal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_personal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.btn_personal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_personal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_personal.ForeColor = System.Drawing.Color.White;
+            this.btn_personal.Location = new System.Drawing.Point(0, 120);
+            this.btn_personal.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_personal.Name = "btn_personal";
+            this.btn_personal.Size = new System.Drawing.Size(168, 65);
+            this.btn_personal.TabIndex = 2;
+            this.btn_personal.Text = "Personal";
+            this.btn_personal.UseVisualStyleBackColor = false;
+            this.btn_personal.Click += new System.EventHandler(this.btn_personal_Click);
+            // 
+            // btn_ConsultaHoras
+            // 
+            this.btn_ConsultaHoras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_ConsultaHoras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ConsultaHoras.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultaHoras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.btn_ConsultaHoras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.btn_ConsultaHoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultaHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConsultaHoras.ForeColor = System.Drawing.Color.White;
+            this.btn_ConsultaHoras.Location = new System.Drawing.Point(0, 55);
+            this.btn_ConsultaHoras.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_ConsultaHoras.Name = "btn_ConsultaHoras";
+            this.btn_ConsultaHoras.Size = new System.Drawing.Size(168, 65);
+            this.btn_ConsultaHoras.TabIndex = 1;
+            this.btn_ConsultaHoras.Text = "Horas";
+            this.btn_ConsultaHoras.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(168, 55);
+            this.panel3.TabIndex = 0;
+            // 
+            // pnl_welcome
+            // 
+            this.pnl_welcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
+            this.pnl_welcome.Controls.Add(this.panel22);
+            this.pnl_welcome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnl_welcome.Location = new System.Drawing.Point(168, 0);
+            this.pnl_welcome.Margin = new System.Windows.Forms.Padding(5);
+            this.pnl_welcome.Name = "pnl_welcome";
+            this.pnl_welcome.Size = new System.Drawing.Size(1078, 693);
+            this.pnl_welcome.TabIndex = 1;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.lb_welcome);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(0, 0);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(1078, 693);
+            this.panel22.TabIndex = 0;
+            // 
+            // lb_welcome
+            // 
+            this.lb_welcome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lb_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_welcome.ForeColor = System.Drawing.Color.Silver;
+            this.lb_welcome.Location = new System.Drawing.Point(0, 0);
+            this.lb_welcome.Name = "lb_welcome";
+            this.lb_welcome.Size = new System.Drawing.Size(1078, 693);
+            this.lb_welcome.TabIndex = 0;
+            this.lb_welcome.Text = "Bienvenido";
+            this.lb_welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1246, 693);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnl_welcome);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de presencia";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.pnl_welcome.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -458,7 +474,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_ConsultaHoras;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnl_welcome;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_registro;
@@ -482,7 +498,8 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Label branding;
         private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Label lb_welcome;
     }
 }

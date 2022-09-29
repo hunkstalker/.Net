@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace IntroduccionCsh.View
 {
-    public partial class MainForm : Form
+    public partial class Personal : UserControl
     {
-        public MainForm()
+        public Personal()
         {
             InitializeComponent();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            pnl_welcome.Dock = DockStyle.Fill;
-        }
-
-        private void btn_personal_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
