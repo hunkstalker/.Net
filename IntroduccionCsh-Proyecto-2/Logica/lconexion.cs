@@ -10,7 +10,7 @@ namespace IntroduccionCsh.Logica
 {
     public class lconexion
     {
-        public static string RutaConexion = "";
+        public static string RutaConexion = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=TimeMachineDB; Integrated Security=true";
         public static SqlConnection Conectar = new SqlConnection(RutaConexion);
 
         public static void Abrir()
