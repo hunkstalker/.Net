@@ -6,19 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using IntroduccionCsh.Datos;
 using System.Data;
+using IntroduccionCsh.Datos;
 
-namespace IntroduccionCsh.Logica
+namespace IntroduccionCsh.Negocio
 {
-    public class lpersona
+    public class npersona
     {
+        #pragma warning disable IDE0017
         public bool InsertarPersonal(dpersona parametros)
         {
 			try
 			{
-                lconexion.Abrir();
-                SqlCommand cmd = new SqlCommand("InsertarPersonal", lconexion.Conectar);
+                dconexion.Abrir();
+                SqlCommand cmd = new SqlCommand("InsertarPersonal", dconexion.Conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nombre", parametros.Nombre);
                 cmd.Parameters.AddWithValue("@identificacion", parametros.Identificacion);
@@ -35,7 +36,7 @@ namespace IntroduccionCsh.Logica
 			}
             finally
             {
-                lconexion.Cerrar();
+                dconexion.Cerrar();
             }
         }
 
@@ -43,8 +44,8 @@ namespace IntroduccionCsh.Logica
         {
             try
             {
-                lconexion.Abrir();
-                SqlCommand cmd = new SqlCommand("EditarPersonal", lconexion.Conectar);
+                dconexion.Abrir();
+                SqlCommand cmd = new SqlCommand("EditarPersonal", dconexion.Conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_persona", parametros.Id_persona);
                 cmd.Parameters.AddWithValue("@nombre", parametros.Nombre);
@@ -62,7 +63,7 @@ namespace IntroduccionCsh.Logica
             }
             finally
             {
-                lconexion.Cerrar();
+                dconexion.Cerrar();
             }
         }
 
@@ -70,8 +71,8 @@ namespace IntroduccionCsh.Logica
         {
             try
             {
-                lconexion.Abrir();
-                SqlCommand cmd = new SqlCommand("EliminarPersonal", lconexion.Conectar);
+                dconexion.Abrir();
+                SqlCommand cmd = new SqlCommand("EliminarPersonal", dconexion.Conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_persona", parametros.Id_persona);
                 cmd.ExecuteNonQuery();
@@ -84,10 +85,26 @@ namespace IntroduccionCsh.Logica
             }
             finally
             {
-                lconexion.Cerrar();
+                dconexion.Cerrar();
             }
         }
 
-
+        public void MostrarPersonal(ref DataTable dt, int desde, int hasta)
+        {
+            try
+            {
+                dconexion.Abrir();
+                SqlDataAdapter da = new SqlDataAdapter("MostrarPersonal", dconexion.Conectar);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                dconexion.Cerrar();
+            }
+        }
     }
 }

@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logica\lconexion.cs" />
-    <Compile Include="Logica\lpersona.cs" />
+    <Compile Include="Datos\dconexion.cs" />
+    <Compile Include="Negocio\npersona.cs" />
     <Compile Include="Datos\dpersona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

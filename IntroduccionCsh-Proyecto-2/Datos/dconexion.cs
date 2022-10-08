@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace IntroduccionCsh.Logica
+namespace IntroduccionCsh.Datos
 {
-    public class lconexion
+    public class dconexion
     {
         public static string RutaConexion = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=TimeMachineDB; Integrated Security=true";
         public static SqlConnection Conectar = new SqlConnection(RutaConexion);
