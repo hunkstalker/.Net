@@ -56,8 +56,8 @@
             this.btn_personal = new System.Windows.Forms.Button();
             this.btn_ConsultaHoras = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnl_padre = new System.Windows.Forms.Panel();
             this.pnl_welcome = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
             this.lb_welcome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -67,8 +67,8 @@
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.pnl_padre.SuspendLayout();
             this.pnl_welcome.SuspendLayout();
-            this.panel22.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -409,26 +409,26 @@
             this.panel3.Size = new System.Drawing.Size(168, 55);
             this.panel3.TabIndex = 0;
             // 
+            // pnl_padre
+            // 
+            this.pnl_padre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
+            this.pnl_padre.Controls.Add(this.pnl_welcome);
+            this.pnl_padre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_padre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnl_padre.Location = new System.Drawing.Point(168, 0);
+            this.pnl_padre.Margin = new System.Windows.Forms.Padding(5);
+            this.pnl_padre.Name = "pnl_padre";
+            this.pnl_padre.Size = new System.Drawing.Size(1078, 693);
+            this.pnl_padre.TabIndex = 1;
+            // 
             // pnl_welcome
             // 
-            this.pnl_welcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
-            this.pnl_welcome.Controls.Add(this.panel22);
+            this.pnl_welcome.Controls.Add(this.lb_welcome);
             this.pnl_welcome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnl_welcome.Location = new System.Drawing.Point(168, 0);
-            this.pnl_welcome.Margin = new System.Windows.Forms.Padding(5);
+            this.pnl_welcome.Location = new System.Drawing.Point(0, 0);
             this.pnl_welcome.Name = "pnl_welcome";
             this.pnl_welcome.Size = new System.Drawing.Size(1078, 693);
-            this.pnl_welcome.TabIndex = 1;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.lb_welcome);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(0, 0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(1078, 693);
-            this.panel22.TabIndex = 0;
+            this.pnl_welcome.TabIndex = 0;
             // 
             // lb_welcome
             // 
@@ -447,13 +447,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1246, 693);
-            this.Controls.Add(this.pnl_welcome);
+            this.Controls.Add(this.pnl_padre);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de presencia";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -463,8 +464,8 @@
             this.panel11.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.pnl_padre.ResumeLayout(false);
             this.pnl_welcome.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -474,7 +475,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_ConsultaHoras;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel pnl_welcome;
+        private System.Windows.Forms.Panel pnl_padre;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_registro;
@@ -499,7 +500,7 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel pnl_welcome;
         private System.Windows.Forms.Label lb_welcome;
     }
 }
