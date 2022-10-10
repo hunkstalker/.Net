@@ -11,21 +11,21 @@ using IntroduccionCsh.Datos;
 
 namespace IntroduccionCsh.Negocio
 {
-    public class npersona
+    public class NPersona
     {
-        public bool InsertarPersonal(dpersona parametros)
+        public bool InsertarPersonal(DPersona parametros)
         {
 			try
 			{
-                dconexion.Abrir();
-                SqlCommand cmd = new SqlCommand("InsertarPersonal", dconexion.Conectar)
+                DConexion.Abrir();
+                SqlCommand cmd = new SqlCommand("InsertarPersonal", DConexion.Conectar)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
                 cmd.Parameters.AddWithValue("@nombre", parametros.Nombre);
                 cmd.Parameters.AddWithValue("@identificacion", parametros.Identificacion);
                 cmd.Parameters.AddWithValue("@pais", parametros.Pais);
-                cmd.Parameters.AddWithValue("@id_cargo", parametros.Id_cargo);
+                cmd.Parameters.AddWithValue("@id_cargo", parametros.IdCargo);
                 cmd.Parameters.AddWithValue("@sueldoPorHora", parametros.SueldoPorHora);
                 cmd.ExecuteNonQuery();
                 return true;
@@ -37,24 +37,24 @@ namespace IntroduccionCsh.Negocio
 			}
             finally
             {
-                dconexion.Cerrar();
+                DConexion.Cerrar();
             }
         }
 
-        public bool EditarPersonal(dpersona parametros)
+        public bool EditarPersonal(DPersona parametros)
         {
             try
             {
-                dconexion.Abrir();
-                SqlCommand cmd = new SqlCommand("EditarPersonal", dconexion.Conectar)
+                DConexion.Abrir();
+                SqlCommand cmd = new SqlCommand("EditarPersonal", DConexion.Conectar)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                cmd.Parameters.AddWithValue("@id_persona", parametros.Id_persona);
+                cmd.Parameters.AddWithValue("@id_persona", parametros.IdPersona);
                 cmd.Parameters.AddWithValue("@nombre", parametros.Nombre);
                 cmd.Parameters.AddWithValue("@identificacion", parametros.Identificacion);
                 cmd.Parameters.AddWithValue("@pais", parametros.Pais);
-                cmd.Parameters.AddWithValue("@id_cargo", parametros.Id_cargo);
+                cmd.Parameters.AddWithValue("@id_cargo", parametros.IdCargo);
                 cmd.Parameters.AddWithValue("@sueldoPorHora", parametros.SueldoPorHora);
                 cmd.ExecuteNonQuery();
                 return true;
@@ -66,20 +66,20 @@ namespace IntroduccionCsh.Negocio
             }
             finally
             {
-                dconexion.Cerrar();
+                DConexion.Cerrar();
             }
         }
 
-        public bool EliminarPersonal(dpersona parametros)
+        public bool EliminarPersonal(DPersona parametros)
         {
             try
             {
-                dconexion.Abrir();
-                SqlCommand cmd = new SqlCommand("EliminarPersonal", dconexion.Conectar)
+                DConexion.Abrir();
+                SqlCommand cmd = new SqlCommand("EliminarPersonal", DConexion.Conectar)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                cmd.Parameters.AddWithValue("@id_persona", parametros.Id_persona);
+                cmd.Parameters.AddWithValue("@id_persona", parametros.IdPersona);
                 cmd.ExecuteNonQuery();
                 return true;
             }
@@ -90,7 +90,7 @@ namespace IntroduccionCsh.Negocio
             }
             finally
             {
-                dconexion.Cerrar();
+                DConexion.Cerrar();
             }
         }
 
@@ -98,8 +98,8 @@ namespace IntroduccionCsh.Negocio
         {
             try
             {
-                dconexion.Abrir();
-                SqlDataAdapter da = new SqlDataAdapter("MostrarPersonal", dconexion.Conectar);
+                DConexion.Abrir();
+                SqlDataAdapter da = new SqlDataAdapter("MostrarPersonal", DConexion.Conectar);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.AddWithValue("@desde", desde);
                 da.SelectCommand.Parameters.AddWithValue("@hasta", hasta);
@@ -111,7 +111,7 @@ namespace IntroduccionCsh.Negocio
             }
             finally
             {
-                dconexion.Cerrar();
+                DConexion.Cerrar();
             }
         }
 
@@ -119,8 +119,8 @@ namespace IntroduccionCsh.Negocio
         {
             try
             {
-                dconexion.Abrir();
-                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonal", dconexion.Conectar);
+                DConexion.Abrir();
+                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonal", DConexion.Conectar);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.AddWithValue("@desde", desde);
                 da.SelectCommand.Parameters.AddWithValue("@hasta", hasta);
@@ -133,7 +133,7 @@ namespace IntroduccionCsh.Negocio
             }
             finally
             {
-                dconexion.Cerrar();
+                DConexion.Cerrar();
             }
         }
     }

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace IntroduccionCsh.Datos
 {
-    public class dconexion
+    public class DConexion
     {
         public static string RutaConexion = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=TimeMachineDB; Integrated Security=true";
         public static SqlConnection Conectar = new SqlConnection(RutaConexion);

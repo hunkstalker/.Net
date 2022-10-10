@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using IntroduccionCsh.Datos;
+using IntroduccionCsh.Negocio;
 
 namespace IntroduccionCsh.View
 {
@@ -18,13 +19,14 @@ namespace IntroduccionCsh.View
             InitializeComponent();
         }
 
-        private void btnAddClick(object sender, EventArgs e)
+        private void BtnAddClick(object sender, EventArgs e)
         {
-            uiConfigurationInsertPersonal();
-            clean();
+            UIConfigurationInsertPersonal();
+            Clean();
+            BuscarCargos();
         }
 
-        private void uiConfigurationInsertPersonal()
+        private void UIConfigurationInsertPersonal()
         {
             panelCargos.Visible = false;
             panelPaginado.Visible = false;
@@ -34,12 +36,49 @@ namespace IntroduccionCsh.View
             BtnSaveChanges.Visible = true;
         }
 
-        private void clean()
+        private void Clean()
         {
             tb_nombre_apellidos.Clear();
             tb_id.Clear();
             tb_job_title.Clear();
             tb_salary_per_hour.Clear();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InsertarPersonal()
+        {
+            DPersona parametros = new DPersona();
+            NPersona function = new NPersona();
+            parametros.Nombre = tb_nombre_apellidos.Text;
+            parametros.Identificacion = tb_id.Text;
+            parametros.Pais = cb_country.Text;
+            parametros.SueldoPorHora = Convert.ToDouble(tb_salary_per_hour);
+        }
+
+        private void InsertarCargos()
+        {
+            DCargos parametros = new DCargos();
+            NCargos function = new NCargos();
+            parametros.Cargo = tb_job_titleG.Text;
+            parametros.SueldoPorHora = Convert.ToDouble(tb_salary_per_hourG);
+            if (function.InsertarCargo(parametros) == true)
+            {
+                BuscarCargos();
+            }
+        }
+
+        private void BuscarCargos()
+        {
+            DataTable dt = new DataTable();
+            NCargos function = new NCargos();
+            function.BuscarCargo(ref dt, tb_job_title.Text);
+            data_list_cargos.DataSource = dt;
+            DBases.DisDTV(ref data_list_cargos);
+
         }
     }
 }
