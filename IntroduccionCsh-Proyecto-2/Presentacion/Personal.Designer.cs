@@ -314,6 +314,7 @@
             this.panelRegistros.Name = "panelRegistros";
             this.panelRegistros.Size = new System.Drawing.Size(1264, 529);
             this.panelRegistros.TabIndex = 3;
+            this.panelRegistros.Visible = false;
             // 
             // panelCargos
             // 
