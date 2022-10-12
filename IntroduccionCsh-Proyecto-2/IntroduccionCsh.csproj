@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\DBases.cs" />
     <Compile Include="Datos\DCargos.cs" />
     <Compile Include="Datos\DConexion.cs" />
     <Compile Include="Negocio\NCargos.cs" />

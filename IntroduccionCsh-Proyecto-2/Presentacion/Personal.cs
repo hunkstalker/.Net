@@ -22,8 +22,7 @@ namespace IntroduccionCsh.View
         private void BtnAddClick(object sender, EventArgs e)
         {
             UIConfigurationInsertPersonal();
-            Clean();
-            BuscarCargos();
+            Clean(); 
         }
 
         private void UIConfigurationInsertPersonal()
@@ -42,6 +41,7 @@ namespace IntroduccionCsh.View
             tb_id.Clear();
             tb_job_title.Clear();
             tb_salary_per_hour.Clear();
+            BuscarCargos();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -78,7 +78,20 @@ namespace IntroduccionCsh.View
             function.BuscarCargo(ref dt, tb_job_title.Text);
             data_list_cargos.DataSource = dt;
             DBases.DisDTV(ref data_list_cargos);
+        }
 
+        private void tb_job_title_TextChanged(object sender, EventArgs e)
+        {
+            BuscarCargos();
+        }
+
+        private void btn_add_job_title_Click(object sender, EventArgs e)
+        {
+            panelCargos.Visible = true;
+            panelCargos.Dock = DockStyle.Fill;
+            panelCargos.BringToFront();
+            BtnSaveCargo.Visible = true;
+            BtnSaveChangesCargo.Visible = false;
         }
     }
 }

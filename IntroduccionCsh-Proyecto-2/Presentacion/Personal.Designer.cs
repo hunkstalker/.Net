@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelRegistros = new System.Windows.Forms.Panel();
+            this.data_list_cargos = new System.Windows.Forms.DataGridView();
             this.panelCargos = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -75,16 +76,15 @@
             this.lb_country = new System.Windows.Forms.Label();
             this.lb_id = new System.Windows.Forms.Label();
             this.lb_nombre_apellidos = new System.Windows.Forms.Label();
-            this.data_list_cargos = new System.Windows.Forms.DataGridView();
             this.pnl_header_personal.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelPaginado.SuspendLayout();
             this.panelRegistros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data_list_cargos)).BeginInit();
             this.panelCargos.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.data_list_cargos)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_header_personal
@@ -319,6 +319,19 @@
             this.panelRegistros.TabIndex = 3;
             this.panelRegistros.Visible = false;
             // 
+            // data_list_cargos
+            // 
+            this.data_list_cargos.AllowUserToAddRows = false;
+            this.data_list_cargos.AllowUserToDeleteRows = false;
+            this.data_list_cargos.AllowUserToResizeRows = false;
+            this.data_list_cargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_list_cargos.Location = new System.Drawing.Point(328, 332);
+            this.data_list_cargos.Name = "data_list_cargos";
+            this.data_list_cargos.RowHeadersWidth = 50;
+            this.data_list_cargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_list_cargos.Size = new System.Drawing.Size(593, 97);
+            this.data_list_cargos.TabIndex = 19;
+            // 
             // panelCargos
             // 
             this.panelCargos.Controls.Add(this.panel6);
@@ -329,7 +342,7 @@
             this.panelCargos.Controls.Add(this.tb_job_titleG);
             this.panelCargos.Controls.Add(this.label5);
             this.panelCargos.Controls.Add(this.label6);
-            this.panelCargos.Location = new System.Drawing.Point(328, 97);
+            this.panelCargos.Location = new System.Drawing.Point(13, 15);
             this.panelCargos.Name = "panelCargos";
             this.panelCargos.Size = new System.Drawing.Size(593, 229);
             this.panelCargos.TabIndex = 18;
@@ -454,6 +467,7 @@
             this.btn_add_job_title.TabIndex = 16;
             this.btn_add_job_title.Text = "Agregar cargo";
             this.btn_add_job_title.UseVisualStyleBackColor = true;
+            this.btn_add_job_title.Click += new System.EventHandler(this.btn_add_job_title_Click);
             // 
             // cb_country
             // 
@@ -696,6 +710,7 @@
             this.tb_job_title.Name = "tb_job_title";
             this.tb_job_title.Size = new System.Drawing.Size(512, 19);
             this.tb_job_title.TabIndex = 11;
+            this.tb_job_title.TextChanged += new System.EventHandler(this.tb_job_title_TextChanged);
             // 
             // panel5
             // 
@@ -790,18 +805,6 @@
             this.lb_nombre_apellidos.TabIndex = 0;
             this.lb_nombre_apellidos.Text = "Nombres y Apellidos:";
             // 
-            // data_list_cargos
-            // 
-            this.data_list_cargos.AllowUserToAddRows = false;
-            this.data_list_cargos.AllowUserToDeleteRows = false;
-            this.data_list_cargos.AllowUserToResizeRows = false;
-            this.data_list_cargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_list_cargos.Location = new System.Drawing.Point(927, 97);
-            this.data_list_cargos.Name = "data_list_cargos";
-            this.data_list_cargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_list_cargos.Size = new System.Drawing.Size(319, 408);
-            this.data_list_cargos.TabIndex = 19;
-            // 
             // personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -821,10 +824,10 @@
             this.panelPaginado.PerformLayout();
             this.panelRegistros.ResumeLayout(false);
             this.panelRegistros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data_list_cargos)).EndInit();
             this.panelCargos.ResumeLayout(false);
             this.panelCargos.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.data_list_cargos)).EndInit();
             this.ResumeLayout(false);
 
         }

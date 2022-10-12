@@ -68,7 +68,7 @@ namespace IntroduccionCsh.Negocio
             try
             {
                 DConexion.Abrir();
-                SqlDataAdapter da = new SqlDataAdapter("BuscarCargo", DConexion.Conectar);
+                SqlDataAdapter da = new SqlDataAdapter("BuscarCargos", DConexion.Conectar);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.AddWithValue("@buscador", buscador);
                 da.Fill(dt);
