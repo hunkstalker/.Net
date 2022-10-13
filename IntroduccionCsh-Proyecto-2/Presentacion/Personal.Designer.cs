@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_header_personal = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelRegistros = new System.Windows.Forms.Panel();
             this.data_list_cargos = new System.Windows.Forms.DataGridView();
-            this.panelCargos = new System.Windows.Forms.Panel();
+            this.PanelCargos = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.BtnSaveCargo = new System.Windows.Forms.Button();
@@ -66,7 +67,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tb_salary_per_hour = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tb_job_title = new System.Windows.Forms.TextBox();
+            this.TbJobTitle = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -83,7 +84,7 @@
             this.panelPaginado.SuspendLayout();
             this.panelRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_list_cargos)).BeginInit();
-            this.panelCargos.SuspendLayout();
+            this.PanelCargos.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -294,14 +295,14 @@
             // 
             this.panelRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
             this.panelRegistros.Controls.Add(this.data_list_cargos);
-            this.panelRegistros.Controls.Add(this.panelCargos);
+            this.panelRegistros.Controls.Add(this.PanelCargos);
             this.panelRegistros.Controls.Add(this.flowLayoutPanel1);
             this.panelRegistros.Controls.Add(this.btn_add_job_title);
             this.panelRegistros.Controls.Add(this.cb_country);
             this.panelRegistros.Controls.Add(this.panel8);
             this.panelRegistros.Controls.Add(this.tb_salary_per_hour);
             this.panelRegistros.Controls.Add(this.panel7);
-            this.panelRegistros.Controls.Add(this.tb_job_title);
+            this.panelRegistros.Controls.Add(this.TbJobTitle);
             this.panelRegistros.Controls.Add(this.panel5);
             this.panelRegistros.Controls.Add(this.tb_id);
             this.panelRegistros.Controls.Add(this.panel4);
@@ -324,29 +325,41 @@
             this.data_list_cargos.AllowUserToAddRows = false;
             this.data_list_cargos.AllowUserToDeleteRows = false;
             this.data_list_cargos.AllowUserToResizeRows = false;
+            this.data_list_cargos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_list_cargos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.data_list_cargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_list_cargos.Location = new System.Drawing.Point(328, 332);
             this.data_list_cargos.Name = "data_list_cargos";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_list_cargos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.data_list_cargos.RowHeadersWidth = 50;
             this.data_list_cargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_list_cargos.Size = new System.Drawing.Size(593, 97);
-            this.data_list_cargos.TabIndex = 19;
+            this.data_list_cargos.ShowCellErrors = false;
+            this.data_list_cargos.ShowRowErrors = false;
+            this.data_list_cargos.Size = new System.Drawing.Size(526, 97);
+            this.data_list_cargos.TabIndex = 1;
             // 
-            // panelCargos
+            // PanelCargos
             // 
-            this.panelCargos.Controls.Add(this.panel6);
-            this.panelCargos.Controls.Add(this.panel9);
-            this.panelCargos.Controls.Add(this.BtnSaveCargo);
-            this.panelCargos.Controls.Add(this.BtnSaveChangesCargo);
-            this.panelCargos.Controls.Add(this.TbSalaryPerHourG);
-            this.panelCargos.Controls.Add(this.TbJobTitleG);
-            this.panelCargos.Controls.Add(this.label5);
-            this.panelCargos.Controls.Add(this.label6);
-            this.panelCargos.Location = new System.Drawing.Point(449, 46);
-            this.panelCargos.Name = "panelCargos";
-            this.panelCargos.Size = new System.Drawing.Size(593, 229);
-            this.panelCargos.TabIndex = 18;
-            this.panelCargos.Visible = false;
+            this.PanelCargos.Controls.Add(this.panel6);
+            this.PanelCargos.Controls.Add(this.panel9);
+            this.PanelCargos.Controls.Add(this.BtnSaveCargo);
+            this.PanelCargos.Controls.Add(this.BtnSaveChangesCargo);
+            this.PanelCargos.Controls.Add(this.TbSalaryPerHourG);
+            this.PanelCargos.Controls.Add(this.TbJobTitleG);
+            this.PanelCargos.Controls.Add(this.label5);
+            this.PanelCargos.Controls.Add(this.label6);
+            this.PanelCargos.Location = new System.Drawing.Point(449, 46);
+            this.PanelCargos.Name = "PanelCargos";
+            this.PanelCargos.Size = new System.Drawing.Size(593, 229);
+            this.PanelCargos.TabIndex = 18;
+            this.PanelCargos.Visible = false;
             // 
             // panel6
             // 
@@ -395,6 +408,7 @@
             this.TbSalaryPerHourG.Name = "TbSalaryPerHourG";
             this.TbSalaryPerHourG.Size = new System.Drawing.Size(374, 19);
             this.TbSalaryPerHourG.TabIndex = 19;
+            this.TbSalaryPerHourG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbSalaryPerHourG_KeyPress);
             // 
             // TbJobTitleG
             // 
@@ -701,17 +715,17 @@
             this.panel7.Size = new System.Drawing.Size(512, 4);
             this.panel7.TabIndex = 12;
             // 
-            // tb_job_title
+            // TbJobTitle
             // 
-            this.tb_job_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.tb_job_title.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_job_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_job_title.ForeColor = System.Drawing.Color.White;
-            this.tb_job_title.Location = new System.Drawing.Point(205, 199);
-            this.tb_job_title.Name = "tb_job_title";
-            this.tb_job_title.Size = new System.Drawing.Size(512, 19);
-            this.tb_job_title.TabIndex = 11;
-            this.tb_job_title.TextChanged += new System.EventHandler(this.TbJobTitle_TextChanged);
+            this.TbJobTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.TbJobTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbJobTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbJobTitle.ForeColor = System.Drawing.Color.White;
+            this.TbJobTitle.Location = new System.Drawing.Point(205, 199);
+            this.TbJobTitle.Name = "TbJobTitle";
+            this.TbJobTitle.Size = new System.Drawing.Size(512, 19);
+            this.TbJobTitle.TabIndex = 11;
+            this.TbJobTitle.TextChanged += new System.EventHandler(this.TbJobTitle_TextChanged);
             // 
             // panel5
             // 
@@ -826,8 +840,8 @@
             this.panelRegistros.ResumeLayout(false);
             this.panelRegistros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_list_cargos)).EndInit();
-            this.panelCargos.ResumeLayout(false);
-            this.panelCargos.PerformLayout();
+            this.PanelCargos.ResumeLayout(false);
+            this.PanelCargos.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -845,7 +859,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox tb_salary_per_hour;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox tb_job_title;
+        private System.Windows.Forms.TextBox TbJobTitle;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox tb_id;
         private System.Windows.Forms.Panel panel4;
@@ -871,7 +885,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_to_end;
         private System.Windows.Forms.Button btn_to_first;
-        private System.Windows.Forms.Panel panelCargos;
+        private System.Windows.Forms.Panel PanelCargos;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button BtnSaveCargo;

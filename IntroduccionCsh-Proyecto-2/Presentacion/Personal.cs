@@ -27,7 +27,7 @@ namespace IntroduccionCsh.View
 
         private void UIConfigurationInsertPersonal()
         {
-            panelCargos.Visible = false;
+            PanelCargos.Visible = false;
             panelPaginado.Visible = false;
             panelRegistros.Visible = true;
             panelRegistros.Dock = DockStyle.Fill;
@@ -39,7 +39,7 @@ namespace IntroduccionCsh.View
         {
             tb_nombre_apellidos.Clear();
             tb_id.Clear();
-            tb_job_title.Clear();
+            TbJobTitle.Clear();
             tb_salary_per_hour.Clear();
             BuscarCargos();
         }
@@ -68,12 +68,22 @@ namespace IntroduccionCsh.View
                     DCargos parametros = new DCargos();
                     NCargos function = new NCargos();
                     parametros.Cargo = TbJobTitleG.Text;
-                    parametros.SueldoPorHora = Convert.ToDouble(TbSalaryPerHourG);
+                    parametros.SueldoPorHora = Convert.ToDouble(TbSalaryPerHourG.Text);
                     if (function.InsertarCargo(parametros) == true)
                     {
+                        TbJobTitle.Clear();
                         BuscarCargos();
+                        PanelCargos.Visible = false;
                     }
                 }
+                else
+                {
+                    MessageBox.Show("El campo salario no puede estar vacío", "Puto Josemon!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("El campo cargo no puede estar vacío", "Fatal error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -81,7 +91,7 @@ namespace IntroduccionCsh.View
         {
             DataTable dt = new DataTable();
             NCargos function = new NCargos();
-            function.BuscarCargo(ref dt, tb_job_title.Text);
+            function.BuscarCargo(ref dt, TbJobTitle.Text);
             data_list_cargos.DataSource = dt;
             DBases.DisDTV(ref data_list_cargos);
         }
@@ -93,9 +103,9 @@ namespace IntroduccionCsh.View
 
         private void BtnAddJobTitle_Click(object sender, EventArgs e)
         {
-            panelCargos.Visible = true;
-            panelCargos.Dock = DockStyle.Fill;
-            panelCargos.BringToFront();
+            PanelCargos.Visible = true;
+            PanelCargos.Dock = DockStyle.Fill;
+            PanelCargos.BringToFront();
             BtnSaveCargo.Visible = true;
             BtnSaveChangesCargo.Visible = false;
             TbJobTitleG.Clear();
@@ -105,6 +115,11 @@ namespace IntroduccionCsh.View
         private void BtnSaveCargo_Click(object sender, EventArgs e)
         {
             InsertarCargos();
+        }
+
+        private void TbSalaryPerHourG_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            DBases.Decimales(TbSalaryPerHourG, e);
         }
     }
 }
