@@ -61,13 +61,19 @@ namespace IntroduccionCsh.View
 
         private void InsertarCargos()
         {
-            DCargos parametros = new DCargos();
-            NCargos function = new NCargos();
-            parametros.Cargo = tb_job_titleG.Text;
-            parametros.SueldoPorHora = Convert.ToDouble(tb_salary_per_hourG);
-            if (function.InsertarCargo(parametros) == true)
+            if (!string.IsNullOrEmpty(TbJobTitleG.Text))
             {
-                BuscarCargos();
+                if (!string.IsNullOrEmpty(TbSalaryPerHourG.Text))
+                {
+                    DCargos parametros = new DCargos();
+                    NCargos function = new NCargos();
+                    parametros.Cargo = TbJobTitleG.Text;
+                    parametros.SueldoPorHora = Convert.ToDouble(TbSalaryPerHourG);
+                    if (function.InsertarCargo(parametros) == true)
+                    {
+                        BuscarCargos();
+                    }
+                }
             }
         }
 
@@ -80,18 +86,25 @@ namespace IntroduccionCsh.View
             DBases.DisDTV(ref data_list_cargos);
         }
 
-        private void tb_job_title_TextChanged(object sender, EventArgs e)
+        private void TbJobTitle_TextChanged(object sender, EventArgs e)
         {
             BuscarCargos();
         }
 
-        private void btn_add_job_title_Click(object sender, EventArgs e)
+        private void BtnAddJobTitle_Click(object sender, EventArgs e)
         {
             panelCargos.Visible = true;
             panelCargos.Dock = DockStyle.Fill;
             panelCargos.BringToFront();
             BtnSaveCargo.Visible = true;
             BtnSaveChangesCargo.Visible = false;
+            TbJobTitleG.Clear();
+            TbSalaryPerHourG.Clear();
+        }
+
+        private void BtnSaveCargo_Click(object sender, EventArgs e)
+        {
+            InsertarCargos();
         }
     }
 }

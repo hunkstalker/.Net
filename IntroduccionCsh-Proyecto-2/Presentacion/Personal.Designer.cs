@@ -54,8 +54,8 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.BtnSaveCargo = new System.Windows.Forms.Button();
             this.BtnSaveChangesCargo = new System.Windows.Forms.Button();
-            this.tb_salary_per_hourG = new System.Windows.Forms.TextBox();
-            this.tb_job_titleG = new System.Windows.Forms.TextBox();
+            this.TbSalaryPerHourG = new System.Windows.Forms.TextBox();
+            this.TbJobTitleG = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -338,11 +338,11 @@
             this.panelCargos.Controls.Add(this.panel9);
             this.panelCargos.Controls.Add(this.BtnSaveCargo);
             this.panelCargos.Controls.Add(this.BtnSaveChangesCargo);
-            this.panelCargos.Controls.Add(this.tb_salary_per_hourG);
-            this.panelCargos.Controls.Add(this.tb_job_titleG);
+            this.panelCargos.Controls.Add(this.TbSalaryPerHourG);
+            this.panelCargos.Controls.Add(this.TbJobTitleG);
             this.panelCargos.Controls.Add(this.label5);
             this.panelCargos.Controls.Add(this.label6);
-            this.panelCargos.Location = new System.Drawing.Point(13, 15);
+            this.panelCargos.Location = new System.Drawing.Point(449, 46);
             this.panelCargos.Name = "panelCargos";
             this.panelCargos.Size = new System.Drawing.Size(593, 229);
             this.panelCargos.TabIndex = 18;
@@ -373,6 +373,7 @@
             this.BtnSaveCargo.TabIndex = 21;
             this.BtnSaveCargo.Text = "Guardar";
             this.BtnSaveCargo.UseVisualStyleBackColor = true;
+            this.BtnSaveCargo.Click += new System.EventHandler(this.BtnSaveCargo_Click);
             // 
             // BtnSaveChangesCargo
             // 
@@ -384,27 +385,27 @@
             this.BtnSaveChangesCargo.Text = "Guardar*";
             this.BtnSaveChangesCargo.UseVisualStyleBackColor = true;
             // 
-            // tb_salary_per_hourG
+            // TbSalaryPerHourG
             // 
-            this.tb_salary_per_hourG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.tb_salary_per_hourG.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_salary_per_hourG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_salary_per_hourG.ForeColor = System.Drawing.Color.White;
-            this.tb_salary_per_hourG.Location = new System.Drawing.Point(167, 75);
-            this.tb_salary_per_hourG.Name = "tb_salary_per_hourG";
-            this.tb_salary_per_hourG.Size = new System.Drawing.Size(374, 19);
-            this.tb_salary_per_hourG.TabIndex = 19;
+            this.TbSalaryPerHourG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.TbSalaryPerHourG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbSalaryPerHourG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbSalaryPerHourG.ForeColor = System.Drawing.Color.White;
+            this.TbSalaryPerHourG.Location = new System.Drawing.Point(167, 75);
+            this.TbSalaryPerHourG.Name = "TbSalaryPerHourG";
+            this.TbSalaryPerHourG.Size = new System.Drawing.Size(374, 19);
+            this.TbSalaryPerHourG.TabIndex = 19;
             // 
-            // tb_job_titleG
+            // TbJobTitleG
             // 
-            this.tb_job_titleG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
-            this.tb_job_titleG.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_job_titleG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_job_titleG.ForeColor = System.Drawing.Color.White;
-            this.tb_job_titleG.Location = new System.Drawing.Point(167, 24);
-            this.tb_job_titleG.Name = "tb_job_titleG";
-            this.tb_job_titleG.Size = new System.Drawing.Size(374, 19);
-            this.tb_job_titleG.TabIndex = 17;
+            this.TbJobTitleG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(73)))));
+            this.TbJobTitleG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbJobTitleG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbJobTitleG.ForeColor = System.Drawing.Color.White;
+            this.TbJobTitleG.Location = new System.Drawing.Point(167, 24);
+            this.TbJobTitleG.Name = "TbJobTitleG";
+            this.TbJobTitleG.Size = new System.Drawing.Size(374, 19);
+            this.TbJobTitleG.TabIndex = 17;
             // 
             // label5
             // 
@@ -467,7 +468,7 @@
             this.btn_add_job_title.TabIndex = 16;
             this.btn_add_job_title.Text = "Agregar cargo";
             this.btn_add_job_title.UseVisualStyleBackColor = true;
-            this.btn_add_job_title.Click += new System.EventHandler(this.btn_add_job_title_Click);
+            this.btn_add_job_title.Click += new System.EventHandler(this.BtnAddJobTitle_Click);
             // 
             // cb_country
             // 
@@ -710,7 +711,7 @@
             this.tb_job_title.Name = "tb_job_title";
             this.tb_job_title.Size = new System.Drawing.Size(512, 19);
             this.tb_job_title.TabIndex = 11;
-            this.tb_job_title.TextChanged += new System.EventHandler(this.tb_job_title_TextChanged);
+            this.tb_job_title.TextChanged += new System.EventHandler(this.TbJobTitle_TextChanged);
             // 
             // panel5
             // 
@@ -875,8 +876,8 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button BtnSaveCargo;
         private System.Windows.Forms.Button BtnSaveChangesCargo;
-        private System.Windows.Forms.TextBox tb_salary_per_hourG;
-        private System.Windows.Forms.TextBox tb_job_titleG;
+        private System.Windows.Forms.TextBox TbSalaryPerHourG;
+        private System.Windows.Forms.TextBox TbJobTitleG;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
