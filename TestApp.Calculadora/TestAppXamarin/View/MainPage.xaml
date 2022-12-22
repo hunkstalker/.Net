@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestAppXamarin.View.MainPage"
+             Title="Calculadora"
+             BackgroundColor="#252526">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary"
+                     IconImageSource="casa.png"
+                     Clicked="BtnCasa_Clicked"/>
+        <ToolbarItem Order="Secondary"
+                     Priority="1"
+                     Text="Opción 1"
+                     Clicked="BtnHola_Clicked"/>
+        <ToolbarItem Order="Secondary"
+                     Priority="2"
+                     Text="Opción 2"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="10">
+        <Label Text="Hola Mundo" TextColor="White"
+               FontSize="20" FontAttributes="Bold"
+               HorizontalOptions="CenterAndExpand"
+               Margin="0,20,0,0"/>
+        <StackLayout BackgroundColor="#252526" VerticalOptions="Start" Margin="0,100,0,0">
+            <Entry Placeholder="Número 1" PlaceholderColor="Gray"
+                   x:Name="txtNumero1" TextColor="White"
+                   Keyboard="Numeric"/>
+            <Entry Placeholder="Número 2" PlaceholderColor="Gray" 
+                   x:Name="txtNumero2" TextColor="White"
+                   Keyboard="Numeric"/>
+            <Frame BackgroundColor="#252526"></Frame>
+            <Button Text="Calcular" CornerRadius="5"
+                    BackgroundColor="#2194F0" TextColor="White" FontAttributes="Bold"
+                    Clicked="BtnCalcular_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>
