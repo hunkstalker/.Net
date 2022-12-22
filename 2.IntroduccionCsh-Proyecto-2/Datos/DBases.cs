@@ -30,7 +30,7 @@ namespace IntroduccionCsh.Datos
             {
                 e.Handled = false;
             }
-            else if(e.KeyChar == '.' && (~CajaTexto.Text.IndexOf(".")) != 0)
+            else if(e.KeyChar == '.' && (~CajaTexto.Text.IndexOf(".")) != 0 || e.KeyChar == ',' && (~CajaTexto.Text.IndexOf(",")) != 0)
             {
                 e.Handled = true;
             }
