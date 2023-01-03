@@ -1,2 +1,2 @@
-# Descripción
-Proyectos con ASP.Net, Xamarin y de escritorio con WinForms & WPF 
+# Description
+Projects with ASP.Net, Xamarin and desktop with WinForms & WPF.
