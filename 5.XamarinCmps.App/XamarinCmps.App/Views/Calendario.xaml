@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinCmps.App.Views.Calendario"
+			 Title="Fechas" BackgroundColor="#404040">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+			<StackLayout Orientation="Horizontal">
+				<Label Text="DatePicker:" TextColor="#FEB93F" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"/>
+				<DatePicker TextColor="White" x:Name="dtFecha" Format="dd/Mm/yyyy" Margin="10,0,0,0" FontSize="14"
+							DateSelected="dtFecha_DateSelected" HorizontalOptions="End">
+				</DatePicker>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Selección Fecha:" TextColor="#FEB93F" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,20,0"/>
+				<Label Text="Resultado" TextColor="White" x:Name="lblResultadoFecha" VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="TimePicker" TextColor="#FEB93F" FontAttributes="Bold" VerticalOptions="Center"  Margin="0,0,20,0" HorizontalOptions="Start"/>
+				<TimePicker TextColor="White" x:Name="tpHora" Format="HH:mm" FontSize="14" HorizontalOptions="End" 
+							PropertyChanged="tpHora_PropertyChanged">
+				</TimePicker>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Selección Hora:" TextColor="#FEB93F" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,20,0"/>
+				<Label Text="Resultado" TextColor="White" x:Name="lblResultadoHora" VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

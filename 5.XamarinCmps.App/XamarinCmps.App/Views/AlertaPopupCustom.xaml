@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="XamarinCmps.App.Views.AlertaPopupCustom">
+	<Frame Margin="50,250,50,250" BackgroundColor="White" CornerRadius="5" >
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="50" />
+			</Grid.RowDefinitions>
+			<Image Source="alerta.png" HeightRequest="150" WidthRequest="150" Margin="100,0,100,0"/>
+			<Label Text="¡Soy un Popup Custom!" TextColor="Gray" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+				   Grid.Row="1" FontSize="16" />
+			<Button Text="OK" x:Name="BtnAlertaCustom" BackgroundColor="#2194F0" TextColor="White" FontAttributes="Bold"
+					Grid.Row="2" CornerRadius="3" Margin="50,0,50,0"
+					Clicked="BtnAlertaCustom_Clicked"/>
+		</Grid>
+	</Frame>
+</popup:PopupPage>

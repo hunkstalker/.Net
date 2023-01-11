@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="XamarinCmps.App.Views.Usuario"
+			 Title="Usuario" BackgroundColor="#404040">
+    <ContentPage.Content>
+        <StackLayout>
+			<controls:CircleImage Source="https://lexica-serve-encoded-images2.sharif.workers.dev/full_jpg/3d72e032-26c8-4168-97af-a3bc52424ae0"
+								  BorderColor="Gray" BorderThickness="3" Margin="20,50,20,0"/>
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>

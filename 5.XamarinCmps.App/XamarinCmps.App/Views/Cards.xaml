@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinCmps.App.Views.Cards"
+			 Title="Cards" BackgroundColor="#BFC3CA">
+    <ContentPage.Content>
+		<ScrollView>
+			<Grid Padding="10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="200" />
+					<RowDefinition Height="200" />
+					<RowDefinition Height="200" />
+					<RowDefinition Height="200" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Frame Grid.Row="0" Margin="10" CornerRadius="5">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="60" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+							<RowDefinition Height="*" />
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Image Source="dinero.png" Grid.RowSpan="2" Grid.Column="0" Margin="0,16,16,0" />
+						<Label Text="Título" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="End" FontAttributes="Bold"/>
+						<Label Text="Descripción" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start"/>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1" Spacing="20">
+							<Button Text="OK" BackgroundColor="#2194F0" TextColor="White" CornerRadius="3" Clicked="BtnVolver_Clicked"/>
+							<Button Text="Cancelar" BackgroundColor="#2194F0" TextColor="White" CornerRadius="3"/>
+						</StackLayout>
+					</Grid>
+				</Frame>
+				<Frame Grid.Row="1" Margin="10" CornerRadius="5">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="60" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+							<RowDefinition Height="*" />
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Image Source="dinero.png" Grid.RowSpan="2" Grid.Column="0" Margin="0,16,16,0" />
+						<Label Text="Título" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="End" FontAttributes="Bold"/>
+						<Label Text="Descripción" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start"/>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1" Spacing="20">
+							<Button Text="OK" BackgroundColor="#2194F0" TextColor="White" CornerRadius="3" Clicked="BtnVolver_Clicked"/>
+							<Button Text="Cancelar" BackgroundColor="#2194F0" TextColor="White" CornerRadius="3"/>
+						</StackLayout>
+					</Grid>
+				</Frame>
+				<Frame Grid.Row="2" Margin="10" CornerRadius="5">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="60" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+							<RowDefinition Height="*" />
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Image Source="dinero.png" Grid.RowSpan="2" Grid.Column="0" Margin="0,16,16,0" />
+						<Label Text="Título" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="End" FontAttributes="Bold"/>
+						<Label Text="Descripción" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start"/>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1" Spacing="20">
+							<Button Text="OK" BackgroundColor="#2194F0" TextColor="White" CornerRadius="3" Clicked="BtnVolver_Clicked"/>
+							<Button Text="Cancelar" BackgroundColor="#2194F0" TextColor="White" CornerRadius="3"/>
+						</StackLayout>
+					</Grid>
+				</Frame>
+				<Frame Grid.Row="3" Margin="10" CornerRadius="5">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="60" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+							<RowDefinition Height="*" />
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Image Source="dinero.png" Grid.RowSpan="2" Grid.Column="0" Margin="0,16,16,0" />
+						<Label Text="Título" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="End" FontAttributes="Bold"/>
+						<Label Text="Descripción" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Start"/>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1" Spacing="20">
+							<Button Text="OK" BackgroundColor="#2194F0" TextColor="White" CornerRadius="3" Clicked="BtnVolver_Clicked"/>
+							<Button Text="Cancelar" BackgroundColor="#2194F0" TextColor="White" CornerRadius="3"/>
+						</StackLayout>
+					</Grid>
+				</Frame>
+			</Grid>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
