@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.App.View.MainMenu" NavigationPage.HasNavigationBar="False">
+	<Grid>
+		<CollectionView x:Name="CollectionViewListaMainMenu" ItemsSource="{Binding ListaMainMenu}" VerticalOptions="Center" Margin="20,40,20,00">
+			<CollectionView.Header>
+				<StackLayout>
+					<Label Text="Proyecto MVVM" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold"/>
+					<Label Text="Menú Principal" HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"/>
+				</StackLayout>
+			</CollectionView.Header>
+			<CollectionView.ItemsLayout>
+				<GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="20"/>
+			</CollectionView.ItemsLayout>
+			<CollectionView.ItemTemplate>
+				<DataTemplate>
+					<Frame CornerRadius="15" Background="#06B6D4">
+						<StackLayout Orientation="Horizontal">
+							<Image Source="{Binding Icon}" HeightRequest="50"/>
+							<Label Text="{Binding Page}" TextColor="White" VerticalOptions="Center" Margin="20,0,0,0"/>
+						</StackLayout>
+						<Frame.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding Path=BindingContext.AsyncNavMainMenuCommand, Source={x:Reference CollectionViewListaMainMenu}}"
+								CommandParameter="{Binding .}"/>
+						</Frame.GestureRecognizers>
+					</Frame>
+				</DataTemplate>
+			</CollectionView.ItemTemplate>
+		</CollectionView>
+	</Grid>
+</ContentPage>
