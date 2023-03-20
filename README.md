@@ -1,2 +1,2 @@
 # Description
-Projects with ASP.Net, Xamarin and desktop with WinForms & WPF.
+Projects with ASP.Net, Xamarin and desktop/mobile with WinForms & MAUI.
