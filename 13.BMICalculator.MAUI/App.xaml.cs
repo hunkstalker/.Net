@@ -1,0 +1,23 @@
+﻿using BMICalculator.MAUI.MVVM.Views;
+
+namespace BMICalculator.MAUI;
+
+public partial class App : Application
+{
+	public App()
+	{
+		Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTM3NDM3NEAzMjMwMmUzNDJlMzBqR0NDc2lnRDRzNExrY3EvSjdrMFVPZmk3TDZvZmhybTVIdFBzSERQc2swPQ==;Mgo DSMBaFt/QHRqVVhkVFpHaV1EQmFJfFBmTGlceFRydUUmHVdTRHRcQl5iQHxSc0JhWH5dcH0=;Mgo DSMBMAY9C3t2VVhkQlFacldJXnxLeEx0RWFab1d6cVJMYl1BJAtUQF1hSn5Qd0xhWHpZcnVUQmVV;Mgo DSMBPh8sVXJ0S0J XE9AflRBQmFPYVF2R2BJdlR1c19EYUwxOX1dQl9gSX1Sf0diXHhccXVQTmk=;MTM3NDM3OEAzMjMwMmUzNDJlMzBVSGQrM1J3REVoZTBoSU11QkxEUTdaUE43YlF3SS9OdDQ3c1UwTzA0dGhzPQ==;NRAiBiAaIQQuGjN/V0Z WE9EaFtKVmBWfFVpR2NbfE55flBBal5QVBYiSV9jS31TdURqW35bd3ZUR2lYWA==;ORg4AjUWIQA/Gnt2VVhkQlFacldJXnxLeEx0RWFab1d6cVJMYl1BJAtUQF1hSn5Qd0xhWHpZcnVXR2NV;MTM3NDM4MUAzMjMwMmUzNDJlMzBrT05vYTI5ekMvd2VHQ25ncnNkaExzdml4N3ByVk1jRmxseVY1d0pNcWxvPQ==;MTM3NDM4MkAzMjMwMmUzNDJlMzBGOVR2RzBzNHJueHRsNzg5RFBOZFYwbHlBYVZCZS92elRWY2xoUWg2Z1dRPQ==;MTM3NDM4M0AzMjMwMmUzNDJlMzBXMFc1a2UwbVBQdnRtcm81ZGhPUWkxeW12QkVsY0hqYUFPYzZXVDNyVWI0PQ==;MTM3NDM4NEAzMjMwMmUzNDJlMzBkc29XS294M2NLeG83MzQvRS93OU5KZE9pRkg5MnUzQ2FkTkZ4V1dkKzVnPQ==;MTM3NDM4NUAzMjMwMmUzNDJlMzBqR0NDc2lnRDRzNExrY3EvSjdrMFVPZmk3TDZvZmhybTVIdFBzSERQc2swPQ==");
+		InitializeComponent();
+		MainPage = new BMIView();
+	}
+
+	protected override Window CreateWindow(IActivationState activationState)
+	{
+		Window window = base.CreateWindow(activationState);
+
+		window.Height = 915;
+		window.Width = 420;
+
+		return window;
+	}
+}
