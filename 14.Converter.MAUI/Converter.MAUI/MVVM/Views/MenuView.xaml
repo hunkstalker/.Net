@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Converter.MAUI.MVVM.Views.MenuView"
+             Title="MenuView"
+			 NavigationPage.HasNavigationBar="False">
+
+	<ContentPage.Resources>
+		<Color x:Key="AppColor1">#ffc72e</Color>
+		<Color x:Key="AppColor2">#f27d18</Color>
+		<Color x:Key="AppColor3">#67d5a0</Color>
+		<Color x:Key="AppColor4">#d74262</Color>
+		<Color x:Key="TextColor">White</Color>
+	</ContentPage.Resources>
+
+	<Grid ColumnDefinitions=".33*, .33*, .33*" RowDefinitions=".1*, .3*, .3*, .3*">
+		<Label Grid.ColumnSpan="3" Text="MAUIVERTER" BackgroundColor="{StaticResource AppColor4}" FontAttributes="Bold" FontSize="Large"
+			   HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" TextColor="{StaticResource TextColor}"/>
+		<!--#region Data -->
+		<Grid Grid.Row="1" Padding="15" BackgroundColor="{x:StaticResource AppColor1}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="server_2_fill.svg"/>
+			<Label Grid.Row="1" Text="Information" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		<!--#region Volume -->
+		<Grid Grid.Row="1" Grid.Column="1" Padding="15" BackgroundColor="{x:StaticResource AppColor2}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="box_3_fill.svg"/>
+			<Label Grid.Row="1" Text="Volume" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		<!--#region Length -->
+		<Grid Grid.Row="1" Grid.Column="2" Padding="15" BackgroundColor="{x:StaticResource AppColor3}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="ruler_line.svg"/>
+			<Label Grid.Row="1" Text="Length" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		<!--#region Mass -->
+		<Grid Grid.Row="2" Padding="15" BackgroundColor="{x:StaticResource AppColor2}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="balance_fill.svg"/>
+			<Label Grid.Row="1" Text="Mass" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		<!--#region Temperature -->
+		<Grid Grid.Row="2" Grid.Column="1" Padding="15" BackgroundColor="{x:StaticResource AppColor3}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="thermometer_fill.svg"/>
+			<Label Grid.Row="1" Text="Temperature" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		<!--#region Energy -->
+		<Grid Grid.Row="2" Grid.Column="2" Padding="15" BackgroundColor="{x:StaticResource AppColor1}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="lightning_fill.svg"/>
+			<Label Grid.Row="1" Text="Energy" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		<!--#region Area -->
+		<Grid Grid.Row="3" Padding="15" BackgroundColor="{x:StaticResource AppColor3}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="map_2_line.svg"/>
+			<Label Grid.Row="1" Text="Area" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		<!--#region Speed -->
+		<Grid Grid.Row="3" Grid.Column="1" Padding="15" BackgroundColor="{x:StaticResource AppColor1}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="run_fill.svg"/>
+			<Label Grid.Row="1" Text="Speed" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		<!--#region Duration -->
+		<Grid Grid.Row="3" Grid.Column="2" Padding="15" BackgroundColor="{x:StaticResource AppColor2}" RowDefinitions=".7*, .3*" >
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+			</Grid.GestureRecognizers>
+			<Image Source="time_fill.svg"/>
+			<Label Grid.Row="1" Text="Duration" TextColor="{x:StaticResource TextColor}" 
+				   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+		</Grid>
+		<!--#endregion-->
+		
+	</Grid>
+		
+</ContentPage>
