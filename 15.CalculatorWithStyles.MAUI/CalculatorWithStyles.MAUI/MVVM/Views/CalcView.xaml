@@ -4,8 +4,11 @@
              x:Class="CalculatorWithStyles.MAUI.MVVM.Views.CalcView"
              Title="CalcView">
 
-	<Grid RowDefinitions=".4*, .6*">
-		
+	<Grid RowDefinitions=".4*,.6*">
+		<VerticalStackLayout>
+			<Label Text="5 * 5" StyleClass="LabelText, LabelOperations" />
+			<Label Text="25" StyleClass="LabelText, LabelResult" />
+		</VerticalStackLayout>
 	</Grid>
 	
 </ContentPage>

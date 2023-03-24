@@ -10,4 +10,14 @@ public partial class App : Application
 
 		MainPage = new CalcView();
 	}
+
+	protected override Window CreateWindow(IActivationState activationState)
+	{
+		Window window = base.CreateWindow(activationState);
+
+		window.Height = 915;
+		window.Width = 420;
+
+		return window;
+	}
 }
