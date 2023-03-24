@@ -27,4 +27,10 @@
 	</Style>
 	<!--#endregion-->
 	
+	<!--#region  BoxView-->
+	<Style TargetType="BoxView">
+		<Setter Property="Color" Value="{AppThemeBinding Light={StaticResource LightPrimary}, Dark={StaticResource DarkPrimary}}"/>
+	</Style>
+	<!--#endregion-->
+	
 </ResourceDictionary>
