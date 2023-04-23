@@ -1,11 +1,13 @@
 # Description
 Practice projects for desktop, web and mobile with .Net
 
-#####Done
-`WinFoms`
-`Xamarin`
-`MAUI`
+**Done**
 
-#####TODO
-`ASP.Net`
-`WinUI 3`
+`WinFoms` <br>
+`Xamarin` <br>
+`MAUI` <br>
+
+**TODO**
+
+`ASP.Net` <br>
+`WinUI 3` <br>
