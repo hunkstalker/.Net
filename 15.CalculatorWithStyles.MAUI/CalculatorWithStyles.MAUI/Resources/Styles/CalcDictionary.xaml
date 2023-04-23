@@ -23,7 +23,8 @@
 
 	<Style Class="LabelResult" TargetType="Label">
 		<Setter Property="FontFamily" Value="SublimaBold"/>
-		<Setter Property="FontSize" Value="50"/>
+		<Setter Property="FontSize" Value="64"/>
+		<Setter Property="FontAttributes" Value="Bold"/>
 	</Style>
 	<!--#endregion-->
 	
@@ -37,7 +38,9 @@
     <Style x:Key="BaseButton" TargetType="Button">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource DarkSecondary}, Light={StaticResource LightSecondary}}"/>
         <Setter Property="FontFamily" Value="SublimaLight"/>
-        <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource DarkText}, Light={StaticResource LightText}}"/>
+		<Setter Property="FontSize" Value="22"/>
+		<Setter Property="FontAttributes" Value="Bold"/>
+		<Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource DarkText}, Light={StaticResource LightText}}"/>
     </Style>
 
     <Style BasedOn="{StaticResource BaseButton}" TargetType="Button"/>
