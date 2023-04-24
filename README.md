@@ -10,4 +10,3 @@ Practice projects for desktop, web and mobile with .Net
 **TODO**
 
 `ASP.Net` <br>
-`WinUI 3` <br>
