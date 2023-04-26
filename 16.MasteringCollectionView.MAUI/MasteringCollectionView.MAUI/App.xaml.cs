@@ -8,7 +8,8 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new DataView();
+		//MainPage = new DataView();
+		MainPage = new LayoutsPage();
 	}
 
 	protected override Window CreateWindow(IActivationState activationState)
