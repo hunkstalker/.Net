@@ -60,6 +60,11 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 			var productsList = SelectedProducts;
 		});
 
+		public ICommand ClearCommand => new Command(() =>
+		{
+			SelectedProducts = null;
+		});
+
 		private void RefreshItems(int lastIndex = 0)
 		{
 			var items = new ObservableCollection<Product>
