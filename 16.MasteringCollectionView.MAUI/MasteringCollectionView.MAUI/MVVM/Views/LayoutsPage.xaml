@@ -5,7 +5,8 @@
 			 BackgroundColor="White"
              Title="LayoutsPage">
 
-	<CollectionView ItemsSource="{Binding Products}" SelectionMode="Single" SelectedItem="{Binding SelectedProduct}" SelectionChangedCommand="{Binding ProductChangedCommand}" >
+	<!--<CollectionView ItemsSource="{Binding Products}" SelectionMode="Single" SelectedItem="{Binding SelectedProduct}" SelectionChangedCommand="{Binding ProductChangedCommand}" >-->
+	<CollectionView ItemsSource="{Binding Products}" SelectionMode="Multiple" SelectedItems="{Binding SelectedProducts}" SelectionChangedCommand="{Binding ProductsChangedCommand}" >
 		<CollectionView.Header>
 			<Frame BackgroundColor="{StaticResource Primary}" CornerRadius="0" BorderColor="{StaticResource Primary}" >
 				<Label FontSize="Medium" FontAttributes="Bold" Text="Products" TextColor="White"/>

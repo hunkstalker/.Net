@@ -6,9 +6,14 @@ using System.Windows.Input;
 namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 {
 	[AddINotifyPropertyChangedInterface]
-	internal class DataViewModel
+	public class DataViewModel
 	{
-		public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
+		const int numberOfItemsPerPage = 10;
+
+		private Product selectedProduct;
+		private List<object> selectedProducts;
+
+		public ObservableCollection<Product> Products { get; set; } = new();
 		public bool IsRefreshing { get; set; }
 		public Product SelectedProduct
 		{
@@ -17,9 +22,7 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 				selectedProduct = value;
 			}
 		}
-
-		const int numberOfItemsPerPage = 10;
-		private Product selectedProduct;
+		public List<object> SelectedProducts { get; set; } = new();
 
 		public ICommand RefreshCommand => new Command(async () =>
 		{
@@ -42,6 +45,11 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 		public ICommand ProductChangedCommand => new Command(() =>
 		{
 			var selectedProduct = SelectedProduct;
+		});
+
+		public ICommand ProductsChangedCommand => new Command(() =>
+		{
+			var productsList = SelectedProducts;
 		});
 
 		public DataViewModel()
