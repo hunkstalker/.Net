@@ -11,7 +11,6 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 		const int numberOfItemsPerPage = 10;
 
 		private Product selectedProduct;
-		private List<object> selectedProducts;
 
 		public ObservableCollection<Product> Products { get; set; } = new();
 		public bool IsRefreshing { get; set; }
@@ -23,6 +22,15 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 			}
 		}
 		public List<object> SelectedProducts { get; set; } = new();
+
+		public DataViewModel()
+		{
+			RefreshItems();
+			SelectedProducts.Add(Products.Skip(5).FirstOrDefault());
+			SelectedProducts.Add(Products.Skip(7).FirstOrDefault());
+
+			SelectedProduct = Products.Skip(3).FirstOrDefault();
+		}
 
 		public ICommand RefreshCommand => new Command(async () =>
 		{
@@ -51,11 +59,6 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 		{
 			var productsList = SelectedProducts;
 		});
-
-		public DataViewModel()
-		{
-			RefreshItems();
-		}
 
 		private void RefreshItems(int lastIndex = 0)
 		{
