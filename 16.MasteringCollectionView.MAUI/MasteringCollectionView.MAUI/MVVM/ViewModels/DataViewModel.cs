@@ -10,8 +10,16 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 	{
 		public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
 		public bool IsRefreshing { get; set; }
+		public Product SelectedProduct
+		{
+			get => selectedProduct; set
+			{
+				selectedProduct = value;
+			}
+		}
 
 		const int numberOfItemsPerPage = 10;
+		private Product selectedProduct;
 
 		public ICommand RefreshCommand => new Command(async () =>
 		{
@@ -29,6 +37,11 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 		public ICommand DeleteCommand => new Command((p) =>
 		{
 			Products.Remove((Product)p);
+		});
+
+		public ICommand ProductChangedCommand => new Command(() =>
+		{
+			var selectedProduct = SelectedProduct;
 		});
 
 		public DataViewModel()

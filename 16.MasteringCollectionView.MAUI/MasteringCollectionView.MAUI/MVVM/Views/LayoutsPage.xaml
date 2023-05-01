@@ -5,22 +5,20 @@
 			 BackgroundColor="White"
              Title="LayoutsPage">
 
-	<CollectionView ItemsSource="{Binding Products}" >
+	<CollectionView ItemsSource="{Binding Products}" SelectionMode="Single" SelectedItem="{Binding SelectedProduct}" SelectionChangedCommand="{Binding ProductChangedCommand}" >
 		<CollectionView.Header>
 			<Frame BackgroundColor="{StaticResource Primary}" CornerRadius="0" BorderColor="{StaticResource Primary}" >
 				<Label FontSize="Medium" FontAttributes="Bold" Text="Products" TextColor="White"/>
 			</Frame>
 		</CollectionView.Header>
 		<CollectionView.Footer>
-			<HorizontalStackLayout>
-				<Label>
-					<Label.FormattedText>
-						<FormattedString>
-							<Span Text=" Powered by .NET MAUI " TextColor="{StaticResource Primary}" FontSize="Medium"/>
-						</FormattedString>
-					</Label.FormattedText>
-				</Label>
-			</HorizontalStackLayout>
+			<Label>
+				<Label.FormattedText>
+					<FormattedString>
+						<Span Text=" Powered by .NET MAUI " TextColor="{StaticResource Primary}" FontSize="Medium"/>
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
 		</CollectionView.Footer>
 		<CollectionView.ItemsLayout>
 			<LinearItemsLayout Orientation="Vertical" />
