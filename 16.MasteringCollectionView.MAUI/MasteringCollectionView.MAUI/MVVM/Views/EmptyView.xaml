@@ -4,10 +4,10 @@
              x:Class="MasteringCollectionView.MAUI.MVVM.Views.EmptyView"
              Title="EmptyView">
 
-	<CollectionView EmptyView="No data found!">
+	<CollectionView>
 		<CollectionView.ItemsSource>
 			<x:Array Type="{x:Type x:String}" />
-			<!--<<x:Array Type="{x:Type x:String}" >
+			<!--<x:Array Type="{x:Type x:String}" >
 				<x:String>Row Sample</x:String>
 				<x:String>Row Sample</x:String>
 				<x:String>Row Sample</x:String>
@@ -19,6 +19,14 @@
 				<x:String>Row Sample</x:String>
 			</x:Array>-->
 		</CollectionView.ItemsSource>
+		<CollectionView.EmptyView>
+			<Grid>
+				<VerticalStackLayout VerticalOptions="Center">
+					<Image HeightRequest="150" Source="notfound.png" VerticalOptions="Center" />
+					<Label FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center" Text="No results!" />
+				</VerticalStackLayout>
+			</Grid>
+		</CollectionView.EmptyView>
 	</CollectionView>
 	
 </ContentPage>
