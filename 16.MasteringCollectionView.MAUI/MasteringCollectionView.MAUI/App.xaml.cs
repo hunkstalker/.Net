@@ -10,7 +10,8 @@ public partial class App : Application
 
 		//MainPage = new DataView();
 		//MainPage = new LayoutsPage();
-		MainPage = new EmptyView();
+		//MainPage = new EmptyView();
+		MainPage = new ProductsView();
 	}
 
 	protected override Window CreateWindow(IActivationState activationState)
