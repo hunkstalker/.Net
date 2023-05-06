@@ -12,18 +12,18 @@
 			</CollectionView.ItemsLayout>
 			<CollectionView.ItemTemplate>
 				<DataTemplate>
-					<Frame BackgroundColor="White" CornerRadius="15" Margin="15,0,15,15" HeightRequest="350">
+					<Frame BackgroundColor="White" CornerRadius="15" Margin="15,0,15,6" HeightRequest="125">
 						<VerticalStackLayout>
-							<Label Text="{Binding Id}" />
-							<Label Text="{Binding Name}" TextColor="Black" FontSize="Large" />
-							<Label Text="{Binding Price, StringFormat='{0:C}'}" TextColor="Black" FontSize="Medium" />
+							<Label Text="{Binding Id}" TextColor="Black" FontSize="Micro"/>
+							<Label Text="{Binding Name}" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+							<Label Text="{Binding Price, StringFormat='{0:C}'}" TextColor="Black" FontSize="Small" />
 						</VerticalStackLayout>
 					</Frame>
 				</DataTemplate>
 			</CollectionView.ItemTemplate>
 			<CollectionView.GroupHeaderTemplate>
 				<DataTemplate>
-					<Label FontAttributes="Bold" FontSize="Large" Text="{Binding Name}" TextColor="Black" Margin="15,0,0,0" />
+					<Label FontAttributes="Bold" FontSize="Small" Text="{Binding Name}" TextColor="Black" HeightRequest="25"/>
 				</DataTemplate>
 			</CollectionView.GroupHeaderTemplate>
 			<CollectionView.GroupFooterTemplate>

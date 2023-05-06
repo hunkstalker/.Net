@@ -28,6 +28,10 @@ public partial class ProductsView : ContentPage
 	{
 		var vm = BindingContext as ProductsViewModel;
 		var product = vm.Products.SelectMany(p => p).FirstOrDefault(x => x.Id == 10);
-		collectionView.ScrollTo(product);
+		//collectionView.ScrollTo(product);
+		// Elegir en qué lugar queremos ver el elemento seleccionado
+		collectionView.ScrollTo(product, position: ScrollToPosition.Center);
+		// Quitar animación de scroll
+		//collectionView.ScrollTo(product, animate: false);
 	}
 }
