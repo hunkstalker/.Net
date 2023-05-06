@@ -15,10 +15,8 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
         {
 			var products = Loaditems();
 
-			var grouped = from p in products
-						  orderby p.Name
-						  group p by p.Name[0].ToString()
-						  into groups
+			var grouped = from p in products orderby p.Name
+						  group p by p.Name[0].ToString() into groups
 						  select new ProductsGroup(groups.Key, groups.ToList());
 			Products = grouped.ToList();
         }
