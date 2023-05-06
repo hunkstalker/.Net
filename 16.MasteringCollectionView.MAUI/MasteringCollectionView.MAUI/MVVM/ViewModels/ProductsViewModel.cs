@@ -1,6 +1,7 @@
 ﻿using MasteringCollectionView.MAUI.MVVM.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 {
     public class ProductsViewModel
     {
-        public List<ProductsGroup> Products { get; set; } = new();
+        public ObservableCollection<ProductsGroup> Products { get; set; } = new ObservableCollection<ProductsGroup>();
 
         public ProductsViewModel()
         {
@@ -28,7 +29,7 @@ namespace MasteringCollectionView.MAUI.MVVM.ViewModels
 				}
 			}
 
-			Products = grouped.ToList();
+			Products = new ObservableCollection<ProductsGroup>(grouped.ToList());
         }
 
         private List<Product> Loaditems()

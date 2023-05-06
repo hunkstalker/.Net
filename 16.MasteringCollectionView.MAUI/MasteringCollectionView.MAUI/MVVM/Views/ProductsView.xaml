@@ -6,7 +6,7 @@
              Title="ProductsView">
 	<Grid RowDefinitions=".1*, .9*">
 		<Button Text="Manual Scrolling" Clicked="Button_Clicked" BackgroundColor="MidnightBlue" TextColor="White" />
-		<CollectionView x:Name="collectionView" IsGrouped="True" ItemsSource="{Binding Products}" Scrolled="CollectionView_Scrolled" Grid.Row="1" >
+		<CollectionView x:Name="collectionView" Grid.Row="1" IsGrouped="True" ItemsSource="{Binding Products}" Scrolled="CollectionView_Scrolled" ItemsUpdatingScrollMode="KeepLastItemInView">
 			<CollectionView.ItemsLayout>
 				<LinearItemsLayout ItemSpacing="10" Orientation="Vertical" />
 			</CollectionView.ItemsLayout>

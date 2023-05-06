@@ -27,10 +27,23 @@ public partial class ProductsView : ContentPage
 	private void Button_Clicked(object sender, EventArgs e)
 	{
 		var vm = BindingContext as ProductsViewModel;
+
+		vm.Products.Add(new Models.ProductsGroup("New Group", new List<Models.Product>
+		{
+			new Models.Product
+			{
+				Id = 100,
+				Name = "Bitcoin",
+				Price = 999999
+			}
+		}));
+
 		var product = vm.Products.SelectMany(p => p).FirstOrDefault(x => x.Id == 10);
 		//collectionView.ScrollTo(product);
+
 		// Elegir en qué lugar queremos ver el elemento seleccionado
-		collectionView.ScrollTo(product, position: ScrollToPosition.Center);
+		//collectionView.ScrollTo(product, position: ScrollToPosition.End);
+
 		// Quitar animación de scroll
 		//collectionView.ScrollTo(product, animate: false);
 	}
