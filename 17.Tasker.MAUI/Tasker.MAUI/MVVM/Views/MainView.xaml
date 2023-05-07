@@ -15,7 +15,7 @@
 			<Label StyleClass="LightBlue, SubHeader" Text="CATEGORIES"  />
 			<CollectionView Grid.Row="1" ItemsSource="{Binding Categories}">
 				<CollectionView.ItemsLayout>
-					<LinearItemsLayout ItemSpacing="5" Orientation="Horizontal" />
+					<LinearItemsLayout ItemSpacing="5" Orientation="Horizontal" SnapPointsType="Mandatory" SnapPointsAlignment="Center"/>
 				</CollectionView.ItemsLayout>
 				<CollectionView.ItemTemplate>
 					<DataTemplate>
@@ -31,7 +31,30 @@
 				</CollectionView.ItemTemplate>
 			</CollectionView>
 		</Grid>
-		<Grid Grid.Row="2" BackgroundColor="DarkGoldenrod" />
+		<Grid Grid.Row="2" RowDefinitions=".2*, .8*">
+			<Label StyleClass="LightBlue, SubHeader" Text="PENDING TASKS" />
+			<CollectionView Grid.Row="1" ItemsSource="{Binding Tasks}" >
+				<CollectionView.ItemsLayout>
+					<LinearItemsLayout ItemSpacing="5" Orientation="Vertical" SnapPointsType="Mandatory" SnapPointsAlignment="Start"/>
+				</CollectionView.ItemsLayout>
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<Frame BorderColor="Transparent">
+							<HorizontalStackLayout>
+								<CheckBox x:Name="checkBox" IsChecked="{Binding Completed}" VerticalOptions="Center" Color="{Binding TaskColor, Converter={StaticResource ColorConverter}}" CheckedChanged="checkBox_CheckedChanged" />
+								<Label Text="{Binding TaskName}" VerticalOptions="Center">
+									<Label.Triggers>
+										<DataTrigger Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}" TargetType="Label" Value="True">
+											<Setter Property="TextDecorations" Value="Strikethrough" />
+										</DataTrigger>
+									</Label.Triggers>
+								</Label>
+							</HorizontalStackLayout>
+						</Frame>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+		</Grid>
 	</Grid>
 	
 </ContentPage>
