@@ -3,7 +3,6 @@
 			 xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:converters="clr-namespace:Tasker.MAUI.Converters"
-			 BackgroundColor="White"
              Title="MainView">
 
 	<ContentPage.Resources>
@@ -21,10 +20,11 @@
 				<CollectionView.ItemTemplate>
 					<DataTemplate>
 						<Grid Padding="10">
+							<RoundRectangle StyleClass="Card" />
 							<VerticalStackLayout Padding="15" Spacing="10">
 								<Label StyleClass="LightBlue" Text="{Binding PendingTasks, StringFormat='{0} Tasks'}" />
 								<Label StyleClass="DarkBlue, CardTitle" Text="{Binding CategoryName}" />
-								<ProgressBar Progress=".5" ProgressColor="{Binding Color, Converter={StaticResource ColorConverter}}" />
+								<ProgressBar Progress="{Binding Percentage}" ProgressColor="{Binding Color, Converter={StaticResource ColorConverter}}" />
 							</VerticalStackLayout>
 						</Grid>
 					</DataTemplate>
