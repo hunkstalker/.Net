@@ -1,4 +1,6 @@
-﻿namespace Tasker.MAUI;
+﻿using Tasker.MAUI.MVVM.Views;
+
+namespace Tasker.MAUI;
 
 public partial class App : Application
 {
@@ -6,7 +8,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new MainView();
 	}
 
 	protected override Window CreateWindow(IActivationState activationState)
