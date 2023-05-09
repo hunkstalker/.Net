@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 using System.Windows.Input;
 
 namespace RESTDemo.MAUI
@@ -43,6 +44,20 @@ namespace RESTDemo.MAUI
 				using var responseStream = await response.Content.ReadAsStreamAsync();
 				var data = await JsonSerializer.DeserializeAsync<User>(responseStream, _serializerOptions);
 			}
+		});
+
+		public ICommand AddUserCommand => new Command(async () =>
+		{
+			var url = $"{API_URL}/users";
+			var user = new User
+			{
+				createdAt = DateTime.Now,
+				name = "Strelok",
+				avatar = "https://fakeimg.pl/350x200/?text=MAUI"
+			};
+			string json = JsonSerializer.Serialize(user, _serializerOptions);
+			StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+			var response = await client.PostAsync(url,content);
 		});
 
 		private static async Task<string> GetApiUrlAsync()
