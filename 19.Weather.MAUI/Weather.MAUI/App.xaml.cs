@@ -1,4 +1,6 @@
-﻿namespace Weather.MAUI;
+﻿using Weather.MAUI.MVVM.Views;
+
+namespace Weather.MAUI;
 
 public partial class App : Application
 {
@@ -6,7 +8,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new WeatherView();
 	}
 
 	protected override Window CreateWindow(IActivationState activationState)
