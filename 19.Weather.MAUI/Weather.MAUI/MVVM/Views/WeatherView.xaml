@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage x:Class="Weather.MAUI.MVVM.Views.WeatherView"
+			 xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Weather.MAUI.MVVM.Views.WeatherView"
+			 xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              Title="WeatherView">
 
 	<Grid Margin="15" RowDefinitions=".08*, .1*, .5*, .1*, .3*">
@@ -13,6 +14,7 @@
 			<Label Text="Paris" Style="{StaticResource Title}"/>
 			<Label Text="July 08, 2023" />
 		</VerticalStackLayout>
+		<skia:SKLottieView Grid.Row="2" RepeatCount="-1" Source="storm.json" />
 	</Grid>
 	
 </ContentPage>
