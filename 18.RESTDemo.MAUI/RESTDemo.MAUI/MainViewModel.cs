@@ -71,13 +71,25 @@ namespace RESTDemo.MAUI
 			if (Users.Count > 0)
 			{
 				user = Users.FirstOrDefault(x => x.id == userNumberToUpdate);
-				var url = $"{API_URL}/users/${userNumberToUpdate}";
+				var url = $"{API_URL}/users/{userNumberToUpdate}";
 
 				user.name = "Max";
 
 				string json = JsonSerializer.Serialize(user, _serializerOptions);
 				StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 				var response = await client.PutAsync(url, content);
+			}
+		});
+
+		public ICommand DeleteUserCommand => new Command(async () =>
+		{
+			string userNumberToDelete = "15";
+			var url = $"{API_URL}/users/{userNumberToDelete}";
+
+			var response = await client.DeleteAsync(url);
+			if (response.IsSuccessStatusCode)
+			{
+				Console.WriteLine("Hohoo!");
 			}
 		});
 
