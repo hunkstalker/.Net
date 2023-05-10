@@ -9,7 +9,10 @@
 			<Frame />
 			<SearchBar Placeholder="Search" VerticalOptions="Start" />
 		</Grid>
-
+		<VerticalStackLayout Grid.Row="1" Style="{StaticResource MainStackLayout}">
+			<Label Text="Paris" Style="{StaticResource Title}"/>
+			<Label Text="July 08, 2023" />
+		</VerticalStackLayout>
 	</Grid>
 	
 </ContentPage>
