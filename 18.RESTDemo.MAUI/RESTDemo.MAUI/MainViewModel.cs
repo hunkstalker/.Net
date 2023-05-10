@@ -9,6 +9,8 @@ namespace RESTDemo.MAUI
 		readonly HttpClient client;
 		readonly JsonSerializerOptions _serializerOptions;
 
+		private List<User> Users;
+
 		public string API_URL { get; set; }
 		public string ID { get; set; } = "1";
 
@@ -32,6 +34,7 @@ namespace RESTDemo.MAUI
 			{
 				using var responseStream = await response.Content.ReadAsStreamAsync();
 				var data = await JsonSerializer.DeserializeAsync<List<User>>(responseStream, _serializerOptions);
+				Users = data;
 			}
 		});
 
@@ -58,6 +61,24 @@ namespace RESTDemo.MAUI
 			string json = JsonSerializer.Serialize(user, _serializerOptions);
 			StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 			var response = await client.PostAsync(url,content);
+		});
+
+		public ICommand UpdateUserCommand => new Command(async () =>
+		{
+			User user = new();
+			string userNumberToUpdate = "1";
+
+			if (Users.Count > 0)
+			{
+				user = Users.FirstOrDefault(x => x.id == userNumberToUpdate);
+				var url = $"{API_URL}/users/${userNumberToUpdate}";
+
+				user.name = "Max";
+
+				string json = JsonSerializer.Serialize(user, _serializerOptions);
+				StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+				var response = await client.PutAsync(url, content);
+			}
 		});
 
 		private static async Task<string> GetApiUrlAsync()
