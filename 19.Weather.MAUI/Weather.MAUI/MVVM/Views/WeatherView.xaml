@@ -25,7 +25,7 @@
 				</VerticalStackLayout>
 				<VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="10">
 					<Label Text="Wind" Style="{StaticResource WeatherTitle}"/>
-					<Label Text="10Kh/h" Style="{StaticResource WeatherValue}"/>
+					<Label Text="10Km/h" Style="{StaticResource WeatherValue}"/>
 				</VerticalStackLayout>
 				<VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="10">
 					<Label Text="Weather" Style="{StaticResource WeatherTitle}"/>
