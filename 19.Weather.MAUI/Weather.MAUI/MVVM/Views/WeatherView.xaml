@@ -14,22 +14,22 @@
 				<SearchBar x:Name="searchBar" Placeholder="Search" VerticalOptions="Start" SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"/>
 			</Grid>
 			<VerticalStackLayout Grid.Row="1" Style="{StaticResource MainStackLayout}">
-				<Label Text="Paris" Style="{StaticResource Title}"/>
-				<Label Text="July 08, 2023" />
+				<Label Text="{Binding PlaceName}" Style="{StaticResource Title}"/>
+				<Label Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}" />
 			</VerticalStackLayout>
 			<skia:SKLottieView Grid.Row="2" RepeatCount="-1" Source="storm.json" />
 			<Grid Grid.Row="3" ColumnDefinitions="*,*,*" Margin="10">
 				<VerticalStackLayout HorizontalOptions="Center" Spacing="10">
 					<Label Text="Temp" Style="{StaticResource WeatherTitle}"/>
-					<Label Text="25ºC" Style="{StaticResource WeatherValue}"/>
+					<Label Text="{Binding WeatherData.current_weather.temperature, StringFormat='{0}ºC'}" Style="{StaticResource WeatherValue}"/>
 				</VerticalStackLayout>
 				<VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="10">
 					<Label Text="Wind" Style="{StaticResource WeatherTitle}"/>
-					<Label Text="10Km/h" Style="{StaticResource WeatherValue}"/>
+					<Label Text="{Binding WeatherData.current_weather.windspeed, StringFormat='{0}ºKm/h'}" Style="{StaticResource WeatherValue}"/>
 				</VerticalStackLayout>
 				<VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="10">
 					<Label Text="Weather" Style="{StaticResource WeatherTitle}"/>
-					<Label Text="Sunny" Style="{StaticResource WeatherValue}"/>
+					<Label Text="{Binding WeatherData.current_weather.weathercode}" Style="{StaticResource WeatherValue}"/>
 				</VerticalStackLayout>
 			</Grid>
 			<CollectionView Grid.Row="4">

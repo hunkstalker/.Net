@@ -1,12 +1,17 @@
-﻿using System.Text.Json;
+﻿using PropertyChanged;
+using System.Text.Json;
 using System.Windows.Input;
 using Weather.MAUI.MVVM.Models;
 
 namespace Weather.MAUI.MVVM.ViewModels
 {
+	[AddINotifyPropertyChangedInterface]
 	public class WeatherViewModel
 	{
 		public WeatherData WeatherData { get; set; }
+		public string PlaceName { get; set; }
+		public DateTime Date { get; set; } = DateTime.Now;
+
 		private HttpClient client;
 
 		public WeatherViewModel()
@@ -16,13 +21,16 @@ namespace Weather.MAUI.MVVM.ViewModels
 
 		public ICommand SearchCommand => new Command(async (searchText) =>
 		{
+			PlaceName = searchText.ToString();
 			var location = await GetCoordinatesAsync(searchText.ToString());
 			await GetWeather(location);
 		});
 
 		private async Task GetWeather(Location location)
 		{
-			var url = $"https://api.open-meteo.com/v1/forecast?latitude={location.Latitude}&longitude={location.Longitude}&hourly=temperature_2m&daily=weathercode,temperature_2m_max,temperature_2m_min&current_weather=true&timezone=auto";
+			string latitude = location.Latitude.ToString().Replace(",", ".");
+			string longitude = location.Longitude.ToString().Replace(",", ".");
+			var url = $"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min&current_weather=true&timezone=America%2FChicago";
 			var response = await client.GetAsync(url);
 			if (response.IsSuccessStatusCode)
 			{
