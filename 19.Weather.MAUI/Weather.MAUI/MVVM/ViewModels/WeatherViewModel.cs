@@ -11,6 +11,8 @@ namespace Weather.MAUI.MVVM.ViewModels
 		public WeatherData WeatherData { get; set; }
 		public string PlaceName { get; set; }
 		public DateTime Date { get; set; } = DateTime.Now;
+		public bool IsVisible { get; set; }
+		public bool IsLoading { get; set; }
 
 		private HttpClient client;
 
@@ -31,6 +33,9 @@ namespace Weather.MAUI.MVVM.ViewModels
 			string latitude = location.Latitude.ToString().Replace(",", ".");
 			string longitude = location.Longitude.ToString().Replace(",", ".");
 			var url = $"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min&current_weather=true&timezone=America%2FChicago";
+
+			IsLoading = true;
+
 			var response = await client.GetAsync(url);
 			if (response.IsSuccessStatusCode)
 			{
@@ -49,7 +54,9 @@ namespace Weather.MAUI.MVVM.ViewModels
 					};
 					WeatherData.dailyArray.Add(dailyArray);
 				}
+				IsVisible = true;
 			}
+			IsLoading = false;
 		}
 
 		static async Task<Location> GetCoordinatesAsync(string address)
