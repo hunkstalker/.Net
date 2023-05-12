@@ -37,6 +37,18 @@ namespace Weather.MAUI.MVVM.ViewModels
 				using var responseStream = await response.Content.ReadAsStreamAsync();
 				var data = await JsonSerializer.DeserializeAsync<WeatherData>(responseStream);
 				WeatherData = data;
+
+				for (int i = 0; i < WeatherData.daily.time.Length; i++)
+				{
+					var dailyArray = new DailyArray
+					{
+						time = WeatherData.daily.time[i],
+						temperature_2m_max = WeatherData.daily.temperature_2m_max[i],
+						temperature_2m_min = WeatherData.daily.temperature_2m_min[i],
+						weathercode = WeatherData.daily.weathercode[i]
+					};
+					WeatherData.dailyArray.Add(dailyArray);
+				}
 			}
 		}
 

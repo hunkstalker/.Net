@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace Weather.MAUI.MVVM.Models
 		public Hourly hourly { get; set; }
 		public Daily_Units daily_units { get; set; }
 		public Daily daily { get; set; }
+		public ObservableCollection<DailyArray> dailyArray { get; set; } = new();
 	}
 
 	public class Current_Weather
@@ -59,6 +61,14 @@ namespace Weather.MAUI.MVVM.Models
 		public int[] weathercode { get; set; }
 		public float[] temperature_2m_max { get; set; }
 		public float[] temperature_2m_min { get; set; }
+	}
+
+	public class DailyArray
+	{
+		public string time { get; set; }
+		public int weathercode { get; set; }
+		public float temperature_2m_max { get; set; }
+		public float temperature_2m_min { get; set; }
 	}
 
 }

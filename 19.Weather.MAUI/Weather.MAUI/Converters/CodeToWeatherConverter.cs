@@ -17,63 +17,63 @@ namespace Weather.MAUI.Converters
 				case 0:
 					return "Cielo despejado";
 				case 1:
-					return "Mayormente despejado";
+					return "Mayor. despejado";
 				case 2:
-					return "Parcialmente nublado";
+					return "Parcial. nublado";
 				case 3:
 					return "Nublado";
 				case 45:
 					return "Niebla";
 				case 48:
-					return "Niebla helada depositada";
+					return "Niebla hel. depositada";
 				case 51:
 					return "Llovizna: Ligera";
 				case 53:
 					return "Llovizna: Moderada";
 				case 55:
-					return "Llovizna: Intensidad densa";
+					return "Llovizna: Int. densa";
 				case 56:
 					return "Llovizna, helada: Ligera";
 				case 57:
-					return "Llovizna, helada: Intensidad densa";
+					return "Llov., hel.: Int. densa";
 				case 61:
 					return "Lluvia: Ligera";
 				case 63:
 					return "Lluvia: Moderada";
 				case 65:
-					return "Lluvia: Intensidad fuerte";
+					return "Lluvia: Int. fuerte";
 				case 66:
-					return "Lluvia, helada: Ligera";
+					return "Lluvia, hel.: Ligera";
 				case 67:
-					return "Lluvia, helada: Intensidad fuerte";
+					return "Lluvia, hel.: Int. fuer.";
 				case 71:
 					return "Nieve: Ligera";
 				case 73:
 					return "Nieve: Moderada";
 				case 75:
-					return "Nieve: Intensidad fuerte";
+					return "Nieve: Int. fuerte";
 				case 77:
 					return "Granos de nieve";
 				case 80:
-					return "Chubascos de lluvia: Ligeros";
+					return "Chub. de lluvia: Lig.";
 				case 81:
-					return "Chubascos de lluvia: Moderados";
+					return "Chub. de lluvia: Mod.";
 				case 82:
-					return "Chubascos de lluvia: Violentos";
+					return "Chub. de lluvia: Violentos";
 				case 85:
-					return "Chubascos de nieve: Ligeros";
+					return "Chub. de nieve: Lig.";
 				case 86:
-					return "Chubascos de nieve: Fuertes";
+					return "Chub. de nieve: Fuer.";
 				case 95:
-					return "Tormenta: Ligera o moderada";
+					return "Tormenta: Lig./mod.";
 				case 96:
-					return "Tormenta: Ligera o moderada con granizo";
+					return "Torm.: Lig./mod. con granizo";
 				case 97:
-					return "Tormenta: Intensidad fuerte";
+					return "Tormenta: Int. fuerte";
 				case 98:
 					return "Tormenta: Sucia";
 				case 99:
-					return "Tormenta: Intensidad fuerte con granizo";
+					return "Torm.: Int. fuer. granizo";
 				default:
 					return "Desconocido";
 			}
