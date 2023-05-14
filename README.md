@@ -1,5 +1,5 @@
 # Description
-Practice projects for desktop, web and mobile with .Net
+Practice projects for desktop, web and mobile with .Net ecosystem.
 
 **Done**
 
@@ -8,6 +8,6 @@ Practice projects for desktop, web and mobile with .Net
 
 **TODO**
 
-`WinFoms` <br>
+`Entity Framework` <br>
 `ASP.Net` <br>
-`WinUI 3` <br>
+`WinUI` <br>
