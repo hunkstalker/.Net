@@ -131,11 +131,11 @@
         <Setter Property="VerticalOptions" Value="Center" />
     </Style>
 
-    <Style
-        ApplyToDerivedTypes="True"
-        Class="RedControl"
-        TargetType="View">
+    <Style ApplyToDerivedTypes="True" Class="RedControl" TargetType="View">
         <Setter Property="BackgroundColor" Value="DarkRed" />
     </Style>
+	<Style ApplyToDerivedTypes="True" Class="BlueControl" TargetType="View">
+		<Setter Property="BackgroundColor" Value="#0D6EFD" />
+	</Style>
 
 </ResourceDictionary>
