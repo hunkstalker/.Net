@@ -10,4 +10,3 @@ Practice projects for desktop, web and mobile with .Net ecosystem.
 
 `Entity Framework` <br>
 `ASP.Net` <br>
-`WinUI` <br>
