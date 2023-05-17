@@ -16,23 +16,23 @@
 			<VerticalStackLayout Spacing="10" StyleClass="Padding25">
 				<Label Text="Transaction Name"/>
 				<Frame StyleClass="FrameBorder">
-					<Entry Placeholder="Transaction Name" Text=""/>
+					<Entry Placeholder="Transaction Name" Text="{Binding Transaction.Name}"/>
 				</Frame>
 				<Label StyleClass="MarginT15" Text="Amount"/>
 				<Frame StyleClass="FrameBorder">
-					<Entry Placeholder="$ 00.00" Text="" VerticalOptions="Center" Keyboard="Numeric"/>
+					<Entry Placeholder="$ 00.00" Text="{Binding Transaction.Amount}" VerticalOptions="Center" Keyboard="Numeric"/>
 				</Frame>
 				<Label StyleClass="MarginT15" Text="Transaction Date"/>
 				<Frame StyleClass="FrameBorder">
-					<DatePicker />
+					<DatePicker Date="{Binding Transaction.TransactionDate}"/>
 				</Frame>
 				<HorizontalStackLayout>
-					<CheckBox IsChecked="False"/>
+					<CheckBox IsChecked="{Binding Transaction.IsIncome}"/>
 					<Label Text="Is Income?" VerticalOptions="Center" Margin="0,0,0,3"/>
 				</HorizontalStackLayout>
 
-				<Button StyleClass="MarginT15, BlueControl" Text="Save"/>
-				<Button StyleClass="MarginT15, RedControl" Text="Cancel"/>
+				<Button StyleClass="MarginT15, BlueControl" Text="Save" x:Name="Save" Clicked="Save_Clicked"/>
+				<Button StyleClass="MarginT15, RedControl" Text="Cancel" x:Name="Cancel" Clicked="Cancel_Clicked" />
 			</VerticalStackLayout>
 		</Grid>
 	</Grid>
