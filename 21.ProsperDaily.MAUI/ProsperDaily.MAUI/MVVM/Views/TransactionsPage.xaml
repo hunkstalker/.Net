@@ -16,11 +16,11 @@
 			<VerticalStackLayout Spacing="10" StyleClass="Padding25">
 				<Label Text="Transaction Name"/>
 				<Frame StyleClass="FrameBorder">
-					<Entry Placeholder="Transaction Name" Text="{Binding Transaction.Name}"/>
+					<Entry Text="{Binding Transaction.Name}"/>
 				</Frame>
 				<Label StyleClass="MarginT15" Text="Amount"/>
 				<Frame StyleClass="FrameBorder">
-					<Entry Placeholder="$ 00.00" Text="{Binding Transaction.Amount}" VerticalOptions="Center" Keyboard="Numeric"/>
+					<Entry Text="{Binding Transaction.Amount}" VerticalOptions="Center" Keyboard="Numeric"/>
 				</Frame>
 				<Label StyleClass="MarginT15" Text="Transaction Date"/>
 				<Frame StyleClass="FrameBorder">

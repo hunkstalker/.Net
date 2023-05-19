@@ -13,9 +13,15 @@ public partial class TransactionsPage : ContentPage
 	private async void Save_Clicked(object sender, EventArgs e)
 	{
 		var currentVM = (TransactionsViewModel)BindingContext;
-		var message = currentVM.SaveTransaction();
-		await DisplayAlert("Info", message, "Ok");
-		await Navigation.PopToRootAsync();
+		if (currentVM != null)
+		{
+			// Error: Le quita el punto donde tiene que haber el decimal
+			decimal num = currentVM.Transaction.Amount;
+			Console.WriteLine(num);
+			var message = currentVM.SaveTransaction();
+			await DisplayAlert("Info", message, "Ok");
+			await Navigation.PopToRootAsync();
+		}
     }
 
 	private async void Cancel_Clicked(object sender, EventArgs e)

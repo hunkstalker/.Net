@@ -12,8 +12,7 @@ namespace ProsperDaily.MAUI.Repositories
 
 		public BaseRepository()
 		{
-			connection =
-				 new SQLiteConnection(Constants.DatabasePath, Constants.Flags);
+			connection = new SQLiteConnection(Constants.DatabasePath, Constants.Flags);
 			connection.CreateTable<T>();
 		}
 
@@ -26,8 +25,7 @@ namespace ProsperDaily.MAUI.Repositories
 			}
 			catch (Exception ex)
 			{
-				StatusMessage =
-					 $"Error: {ex.Message}";
+				StatusMessage = $"Error: {ex.Message}";
 			}
 		}
 
@@ -40,14 +38,11 @@ namespace ProsperDaily.MAUI.Repositories
 		{
 			try
 			{
-				return
-					 connection.Table<T>()
-					 .FirstOrDefault(x => x.Id == id);
+				return connection.Table<T>().FirstOrDefault(x => x.Id == id);
 			}
 			catch (Exception ex)
 			{
-				StatusMessage =
-					 $"Error: {ex.Message}";
+				StatusMessage = $"Error: {ex.Message}";
 			}
 			return null;
 		}
@@ -56,13 +51,11 @@ namespace ProsperDaily.MAUI.Repositories
 		{
 			try
 			{
-				return connection.Table<T>()
-					 .Where(predicate).FirstOrDefault();
+				return connection.Table<T>().Where(predicate).FirstOrDefault();
 			}
 			catch (Exception ex)
 			{
-				StatusMessage =
-					 $"Error: {ex.Message}";
+				StatusMessage = $"Error: {ex.Message}";
 			}
 			return null;
 		}
@@ -75,8 +68,7 @@ namespace ProsperDaily.MAUI.Repositories
 			}
 			catch (Exception ex)
 			{
-				StatusMessage =
-					 $"Error: {ex.Message}";
+				StatusMessage = $"Error: {ex.Message}";
 			}
 			return null;
 		}
@@ -89,36 +81,31 @@ namespace ProsperDaily.MAUI.Repositories
 			}
 			catch (Exception ex)
 			{
-				StatusMessage =
-					 $"Error: {ex.Message}";
+				StatusMessage = $"Error: {ex.Message}";
 			}
 			return null;
 		}
 
 		public void SaveItem(T item)
 		{
-			int result = 0;
 			try
 			{
+				int result;
 				if (item.Id != 0)
 				{
-					result =
-						 connection.Update(item);
-					StatusMessage =
-						 $"{result} row(s) updated";
+					result = connection.Update(item);
+					StatusMessage = $"{result} row(s) updated";
 				}
 				else
 				{
 					result = connection.Insert(item);
-					StatusMessage =
-						 $"{result} row(s) added";
+					StatusMessage = $"{result} row(s) added";
 				}
 
 			}
 			catch (Exception ex)
 			{
-				StatusMessage =
-					 $"Error: {ex.Message}";
+				StatusMessage = $"Error: {ex.Message}";
 			}
 		}
 
@@ -135,8 +122,7 @@ namespace ProsperDaily.MAUI.Repositories
 			}
 			catch (Exception ex)
 			{
-				StatusMessage =
-					 $"Error: {ex.Message}";
+				StatusMessage = $"Error: {ex.Message}";
 			}
 			return null;
 		}
