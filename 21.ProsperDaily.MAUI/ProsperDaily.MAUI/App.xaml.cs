@@ -22,6 +22,6 @@ public partial class App : Application
 
 		TransactionsRepo = _transactionsRepo;
 
-		MainPage = new StatisticsPage();
+		MainPage = new AppContainer();
 	}
 }
