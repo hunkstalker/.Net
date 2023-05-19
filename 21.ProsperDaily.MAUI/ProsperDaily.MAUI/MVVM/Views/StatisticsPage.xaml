@@ -32,13 +32,13 @@
 		</Grid>
 		<Grid Grid.Row="3" RowDefinitions=".1*, .9*" StyleClass="Margin15">
 			<Label Text="Top Spending" />
-			<CollectionView Grid.Row="1" EmptyView="No data found, click on the + button to add a new transaction">
+			<CollectionView Grid.Row="1" EmptyView="No data found, click on the + button to add a new transaction" ItemsSource="{Binding SpendingList}">
 
 				<CollectionView.ItemsLayout>
 					<LinearItemsLayout ItemSpacing="15" Orientation="Vertical" SnapPointsType="Mandatory" SnapPointsAlignment="Start" />
 				</CollectionView.ItemsLayout>
 
-				<CollectionView.ItemsSource>
+				<!--<CollectionView.ItemsSource>
 					<x:Array Type="{x:Type x:String}">
 						<x:String>item 1</x:String>
 						<x:String>item 2</x:String>
@@ -51,14 +51,14 @@
 						<x:String>item 9</x:String>
 						<x:String>item 10</x:String>
 					</x:Array>
-				</CollectionView.ItemsSource>
+				</CollectionView.ItemsSource>-->
 
 				<CollectionView.ItemTemplate>
 					<DataTemplate>
 						<Grid ColumnDefinitions="*,*" RowDefinitions="*,*">
-							<Label StyleClass="StrongMediumTitle" Text="Transaction"/>
-							<Label Grid.Row="1" StyleClass="SmallFont" Text="Today"/>
-							<Label Grid.RowSpan="2" Grid.Column="1" StyleClass="ListAmount" Text="+ $550.00"/>
+							<Label StyleClass="StrongMediumTitle" Text="{Binding Name}"/>
+							<Label Grid.Row="1" StyleClass="SmallFont" Text="{Binding OperationDate, StringFormat='{0:MM/dd/yyyy}'}"/>
+							<Label Grid.RowSpan="2" Grid.Column="1" StyleClass="ListAmount" Text="{Binding Amount, StringFormat='{0:C}'}"/>
 						</Grid>
 					</DataTemplate>
 				</CollectionView.ItemTemplate>

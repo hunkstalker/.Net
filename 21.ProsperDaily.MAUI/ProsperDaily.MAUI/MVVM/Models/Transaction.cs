@@ -7,6 +7,6 @@ namespace ProsperDaily.MAUI.MVVM.Models
 		public string Name { get; set; }
 		public decimal Amount { get; set; }
 		public bool IsIncome { get; set; }
-		public DateTime TransactionDate { get; set; }
+		public DateTime OperationDate { get; set; }
 	}
 }

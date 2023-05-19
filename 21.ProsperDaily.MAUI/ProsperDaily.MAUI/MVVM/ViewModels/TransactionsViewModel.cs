@@ -7,7 +7,7 @@ namespace ProsperDaily.MAUI.MVVM.ViewModels
         public Transaction Transaction { get; set; } = new Transaction
         {
             // TODO: De este modo la fecha no coge el valor del control DatePicker, obviamente...
-            TransactionDate = DateTime.Now,
+            OperationDate = DateTime.Now,
         };
 
         public string SaveTransaction()

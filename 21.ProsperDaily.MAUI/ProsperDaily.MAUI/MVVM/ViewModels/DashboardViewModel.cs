@@ -20,7 +20,7 @@ namespace ProsperDaily.MAUI.MVVM.ViewModels
 		public void FillData()
 		{
 			var transactions = App.TransactionsRepo.GetItems();
-			transactions = transactions.OrderByDescending(x => x.TransactionDate).ToList();
+			transactions = transactions.OrderByDescending(x => x.OperationDate).ToList();
 			Transactions = new ObservableCollection<Transaction>(transactions);
 
 			Balance = 0;
