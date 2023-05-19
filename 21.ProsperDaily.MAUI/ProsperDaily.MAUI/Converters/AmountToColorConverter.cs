@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 
 namespace ProsperDaily.MAUI.Converters
 {
@@ -12,7 +7,6 @@ namespace ProsperDaily.MAUI.Converters
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			var isIncome = ((Label)parameter).Text;
-			var amount = (decimal)value;
 			if (isIncome == "True")
 			{
 				return Colors.DarkGreen;
